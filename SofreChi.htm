@@ -1,29 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
+    <link rel="stylesheet" href="style/main.css" />
     <style>
-        body {
-            margin: 0;
-        }
+      .hide {
+        display: none !important;
+      }
 
-        .hide {
-            display: none;
-        }
-
-        .show {
-            display: block;
-        }
+      .show {
+        display: block;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <main id="stage">
-        <video id="vidStart" src=""></video>
-        <section id="menuPage" class="show"></section>
-        <section id="levelPage" class="hide"></section>
-        <section id="levelOnePage" class="hide"></section>
+      <video
+        id="vidStart"
+        src="Video/vi02.mp4"
+        autoplay
+        muted
+        playsinline
+      ></video>
+      <section id="menuPage" class="page hide">
+        <div id="SelectItem">
+          <div class="header"></div>
+          <button id="playBtn"></button>
+        </div>
+      </section>
+      <section id="levelPage" class="page hide">
+        <h1>Level Page</h1>
+      </section>
+      <section id="levelOnePage" class="page hide"></section>
     </main>
-</body>
 
+    <script src="js/main.js"></script>
+  </body>
 </html>

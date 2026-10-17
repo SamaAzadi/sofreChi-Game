@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#stage {
+  width: 1000px;
+  height: 500px;
+  margin: 20px auto;
+  /* border: 1px solid red; */
+}
+
+#vidStart {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.7s ease;
+}
+
+#menuPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header {
+  /* background: rgb(255, 0, 0); */
+  width: 700px;
+  height: 40px;
+  left: 150px;
+  position: absolute;
+}
+#SelectItem {
+  flex: 1;
+  background: url(../images/menu01.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* border: 1px solid rgb(51, 255, 0); */
+}
+#playBtn {
+  background: url(../images/play.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 130px;
+  left: 475px;
+  cursor: pointer;
+  border: none;
+
+  animation: moveUpDown 1s ease-in-out infinite;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
