@@ -1,65 +1,90 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  background: #000;
 }
+
+/* video{
+  display: hide;
+} */
+
 #stage {
-  width: 1000px;
-  height: 500px;
-  margin: 20px auto;
-  /* border: 1px solid red; */
-}
-
-#vidStart {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: opacity 0.7s ease;
-}
-
-#menuPage {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
-.header {
-  /* background: rgb(255, 0, 0); */
-  width: 700px;
-  height: 40px;
-  left: 150px;
-  position: absolute;
-}
-#SelectItem {
-  flex: 1;
-  background: url(../images/menu01.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 
-  /* border: 1px solid rgb(51, 255, 0); */
-}
-#playBtn {
-  background: url(../images/play.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+.page {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 130px;
-  left: 475px;
+  top: 0;
+  left: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+#stage>#menuPage {
+  background: url("../images/menu0.png") center / contain no-repeat;
+}
+
+#stage>#menuPage>#playBtn {
+  background: url("../images/play.png") center / contain no-repeat;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 260px;
+  left: 730px;
   cursor: pointer;
   border: none;
+  padding: 0;
 
   animation: moveUpDown 1s ease-in-out infinite;
 }
+
 @keyframes moveUpDown {
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
+}
+
+#stage>#levelOnePage {
+  background: url("../images/bg.png") center / contain no-repeat;
+  position: relative;
+}
+
+#stage>#levelOnePage>#putDizi{
+  cursor: pointer;
+  /* background: rgb(34, 255, 0); */
+  width: 120px;
+  height: 70px;
+  position: absolute;
+  bottom: 50px;
+  right: 350px;
+}
+#stage>#levelOnePage>#noon{
+  cursor: pointer;
+  /* background: rgb(34, 255, 0); */
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 90px;
+  right: 720px;
+}
+
+#stage>#levelOnePage>#zobale{
+  cursor: pointer;
+  /* background: rgb(34, 255, 0); */
+  width: 115px;
+  height: 85px;
+  position: absolute;
+  bottom: 70px;
+ left: 260px;
 }

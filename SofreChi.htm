@@ -2,38 +2,33 @@
 <html>
   <head>
     <link rel="stylesheet" href="style/main.css" />
-    <style>
-      .hide {
-        display: none !important;
-      }
-
-      .show {
-        display: block;
-      }
-    </style>
   </head>
 
   <body>
+    <!-- <video id="vidStart" src="video/vi02.mp4"></video> -->
     <main id="stage">
-      <video
-        id="vidStart"
-        src="Video/vi02.mp4"
-        autoplay
-        muted
-        playsinline
-      ></video>
-      <section id="menuPage" class="page hide">
-        <div id="SelectItem">
-          <div class="header"></div>
-          <button id="playBtn"></button>
-        </div>
+      <section id="menuPage" class="page show">
+        <button id="playBtn"></button>
       </section>
-      <section id="levelPage" class="page hide">
-        <h1>Level Page</h1>
+      <section id="levelOnePage" class="page hide">
+        <div id="putDizi"></div>
+        <div id="noon"></div>
+        <div id="zobale"></div>
       </section>
-      <section id="levelOnePage" class="page hide"></section>
     </main>
 
     <script src="js/main.js"></script>
   </body>
+  <script>
+// vidStart.play();
+
+// vidStart.onclick = function(){
+
+// 	this.className = "hide";
+// 	menu.className = "show";
+	
+// 	vidStart.pause();	
+// 	// auStart.play();
+// }
+  </script>
 </html>
