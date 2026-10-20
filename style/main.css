@@ -27,6 +27,10 @@ body {
   display: none !important;
 }
 
+.show {
+  display: block;
+}
+
 #stage>#menuPage {
   background: url("../images/menu0.png") center / contain no-repeat;
 }
@@ -56,7 +60,7 @@ body {
 }
 
 #stage>#levelOnePage {
-  background: url("../images/bg.png") center / contain no-repeat;
+  background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
 }
 
@@ -69,6 +73,49 @@ body {
   bottom: 50px;
   right: 350px;
 }
+
+#dizi{
+  display: none;
+  background: url("../images/Daisy/Dizi01.png") no-repeat 50% 100%;
+  background-size: 50px;
+  position: absolute;
+  bottom: 165px;
+  right: 415px;
+  width: 50px;
+  height: 90px;
+  cursor: pointer;
+}
+
+#dizi.pokht{
+  animation: pokhtDizi 8s steps(1, end) forwards;
+}
+
+#dizi.amade{
+  animation: diziAmade 10s steps(1, end) forwards;
+}
+
+#dizi.sokhte{
+  animation: diziSokhte 5s steps(1, end) infinite;
+}
+
+#dizi1,
+#dizi2 {
+    position: fixed;
+    width: 50px;
+    pointer-events: none;
+    display: none;
+}
+
+#stage>#levelOnePage>#sini{
+  background-color: aliceblue;
+  cursor: pointer;
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  bottom: 180px;
+  left: 710px;
+}
+
 #stage>#levelOnePage>#noon{
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
@@ -79,12 +126,69 @@ body {
   right: 720px;
 }
 
+#stage>#levelOnePage>#zobale:hover{
+  background: url("../images/Trash\ can.png") no-repeat;
+  background-size: cover;
+}
+
 #stage>#levelOnePage>#zobale{
   cursor: pointer;
-  /* background: rgb(34, 255, 0); */
-  width: 115px;
-  height: 85px;
+  width: 126px;
+  height: 125px;
   position: absolute;
-  bottom: 70px;
- left: 260px;
+  bottom: 30px;
+ left: 254px;
+}
+
+@keyframes pokhtDizi {
+	0% {background-image: url(../images/Daisy/Dizi01.png);}
+	5% {background-image: url(../images/Daisy/Dizi02.png);}
+	10% {background-image: url(../images/Daisy/Dizi03.png);}
+	15% {background-image: url(../images/Daisy/Dizi04.png);}
+	20% {background-image: url(../images/Daisy/Dizi05.png);}
+	25% {background-image: url(../images/Daisy/Dizi06.png);}
+  30% {background-image: url(../images/Daisy/Dizi05.png);}
+	35% {background-image: url(../images/Daisy/Dizi04.png);}
+	40% {background-image: url(../images/Daisy/Dizi03.png);}
+	45% {background-image: url(../images/Daisy/Dizi02.png);}
+	50% {background-image: url(../images/Daisy/Dizi01.png);}
+	55% {background-image: url(../images/Daisy/Dizi02.png);}
+  60% {background-image: url(../images/Daisy/Dizi03.png);}
+	65% {background-image: url(../images/Daisy/Dizi04.png);}
+  70% {background-image: url(../images/Daisy/Dizi04.png);}
+	75% {background-image: url(../images/Daisy/Dizi05.png);}
+	80% {background-image: url(../images/Daisy/Dizi06.png);}
+  85% {background-image: url(../images/Daisy/Dizi05.png);}
+	90% {background-image: url(../images/Daisy/Dizi04.png);}
+	95% {background-image: url(../images/Daisy/Dizi03.png);}
+	100% {background-image: url(../images/Daisy/Dizi02.png);}
+	
+}
+
+@keyframes diziAmade {
+	0% {background-image: url(../images/Daisy/Dizi07.png);}
+  10% {background-image: url(../images/Daisy/Dizi11.png);}
+	20% {background-image: url(../images/Daisy/Dizi07.png);}
+  30% {background-image: url(../images/Daisy/Dizi11.png);}
+  40% {background-image: url(../images/Daisy/Dizi07.png);}
+  50% {background-image: url(../images/Daisy/Dizi11.png);}
+  60% {background-image: url(../images/Daisy/Dizi07.png);}
+  70% {background-image: url(../images/Daisy/Dizi11.png);}
+  80% {background-image: url(../images/Daisy/Dizi07.png);}
+  90% {background-image: url(../images/Daisy/Dizi11.png);}
+  100% {background-image: url(../images/Daisy/Dizi07.png);}
+}
+
+@keyframes diziSokhte {
+	0% {background-image: url(../images/Daisy/Daisyfuel02.png);}
+  10% {background-image: url(../images/Daisy/Daisyfuel03.png);}
+  20% {background-image: url(../images/Daisy/Daisyfuel04.png);}
+  30% {background-image: url(../images/Daisy/Daisyfuel05.png);} 
+  40% {background-image: url(../images/Daisy/Daisyfuel04.png);}
+  50% {background-image: url(../images/Daisy/Daisyfuel03.png);}
+  60% {background-image: url(../images/Daisy/Daisyfuel02.png);}
+  70% {background-image: url(../images/Daisy/Daisyfuel02.png);}
+  80% {background-image: url(../images/Daisy/Daisyfuel03.png);}
+  90% {background-image: url(../images/Daisy/Daisyfuel04.png);} 
+  100% {background-image: url(../images/Daisy/Daisyfuel05.png);}
 }
