@@ -162,8 +162,7 @@ body {
 }
 
 #stage>#levelOnePage>#parch{
-  border: 1px solid red;
-  background: url("../images/Pitcher/Pitcher7.png") 50% no-repeat;
+  background: url("") 50% no-repeat;
   background-size: 100px;
   width: 150px;
   height: 130px;
@@ -183,6 +182,10 @@ body {
   animation: parchUp 2s ease-in-out forwards;
 }
 
+#stage>#levelOnePage>#parch.fill{
+  animation: parchUp2 3s ease-in-out 2;
+}
+
 @keyframes parchUp{
     0%{
 		transform:translate(0,0);
@@ -193,6 +196,49 @@ body {
     100%{
 		transform:translate(22px,-40px) rotate(60deg);	
     }	
+}
+
+@keyframes parchUp2{
+    0%{
+		background-image: url(../images/Pitcher/Pitcher06.png);
+    }
+    15%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    30%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    45%{
+		background-image: url(../images/Pitcher/Pitcher9.png);
+    }
+    50%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    65%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    80%{
+		background-image: url(../images/Pitcher/Pitcher06.png);
+    }
+    95%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    100%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    
+}
+
+#stage>#levelOnePage>#parch>#livan2{
+  display: none;
+}
+
+#doogh{
+  width: 30px;
+  height: 42px;
+  position: fixed;
+  pointer-events: none;
+  display: none;
 }
 
 #stage>#levelOnePage>#parch>#livan1,

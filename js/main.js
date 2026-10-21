@@ -21,7 +21,7 @@ let timerAmade;
 let timerSokhte;
 
 putDizi.onclick = function () {
-  if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht) {
+  if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     dizi.style.display = "block";
@@ -42,7 +42,7 @@ putDizi.onclick = function () {
 }
 
 dizi.onclick = function () {
-  if (dizi.className === "amade") {
+  if (dizi.className === "amade" && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     diziBardashteShode = true;
@@ -50,7 +50,7 @@ dizi.onclick = function () {
     dizi.style.display = "none";
     dizi.className = "";
     move(dizi1);
-  } else if (dizi.className === "sokhte") {
+  } else if (dizi.className === "sokhte" && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     darhalPodkht = false;
@@ -79,7 +79,7 @@ let diziInSini = false;
 let siniBardashteShode = false;
 
 noon.onclick = function () {
-  if (!diziBardashteShode) {
+  if (!diziBardashteShode && !dooghIsUp) {
     if (diziInSini) {
       sini.className = "full";
       noonInSini = true;
@@ -104,21 +104,54 @@ sini.onclick = function () {
       diziBardashteShode = false;
     }
   } else {
-    if (noonInSini && diziInSini) {
+    if (noonInSini && diziInSini && !dooghIsUp) {
       sini.className = "khali";
       move(food);
       diziInSini = true;
       siniBardashteShode = true;
-    } else if (noonInSini) {
+    } else if (noonInSini && !dooghIsUp) {
       sini.className = "khali";
       move(noon1);
       siniBardashteShode = true;
 
-    } else if (diziInSini) {
+    } else if (diziInSini && !dooghIsUp) {
       sini.className = "khali";
       move(dizi3);
       siniBardashteShode = true;
     }
+  }
+}
+
+let timerDoogh;
+let timerFill;
+let dooghIsUp = false;
+
+fillDoogh();
+
+function fillDoogh(){
+  if (!dooghIsUp){
+    timerDoogh = setTimeout(() => {
+      parch1.className = "Up";
+    }, 300);
+    timerFill = setTimeout(() => {
+      parch1.style.display = "none";
+      livan1.style.display = "none";
+      parch1.className = "";
+      parch.className = "fill";
+    }, 2300);
+    timerFill = setTimeout(() => {
+      parch1.style.display = "block";
+      livan2.style.display = "block";
+      parch.className = "";
+    }, 8300);
+  }
+}
+
+livan2.onclick = function(){
+  if(!diziBardashteShode && !siniBardashteShode){
+    move(doogh);
+    livan2.style.display = "none";
+    dooghIsUp = true;
   }
 }
 
