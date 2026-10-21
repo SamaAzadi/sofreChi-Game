@@ -443,3 +443,41 @@ body {
     background-image: url(../images/Daisy/Daisyfuel05.png);
   }
 }
+
+#stage>#levelOnePage>.star{
+  width: 32px;
+  height: 30px;
+  background: url("../images/star1.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 45px;
+}
+#stage>#levelOnePage>#star1{
+  right: 342px;
+  display: none;
+}
+#stage>#levelOnePage>#star2{
+  right: 292px;
+  display: none;
+}
+#stage>#levelOnePage>#star3{
+  right: 240px;
+  display: none;
+}
+
+#stage>#levelOnePage>#clientBox,
+#stage>#levelOnePage>#coinBox{
+  position: absolute;
+  top: 45px;
+  color: rgb(255, 238, 216);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#stage>#levelOnePage>#coinBox{
+  right: 480px;
+}
+
+#stage>#levelOnePage>#clientBox{
+  left: 530px;  
+}
