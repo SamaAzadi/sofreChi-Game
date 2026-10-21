@@ -161,6 +161,50 @@ body {
   right: 720px;
 }
 
+#stage>#levelOnePage>#parch{
+  border: 1px solid red;
+  background: url("../images/Pitcher/Pitcher7.png") 50% no-repeat;
+  background-size: 100px;
+  width: 150px;
+  height: 130px;
+  position: absolute;
+  bottom: 230px;
+  left: 300px;
+}
+
+#stage>#levelOnePage>#parch>#parch1{
+  width: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+
+#stage>#levelOnePage>#parch>#parch1.Up{
+  animation: parchUp 2s ease-in-out forwards;
+}
+
+@keyframes parchUp{
+    0%{
+		transform:translate(0,0);
+    }
+    50%{
+		transform:translate(22px,-40px) rotate(10deg);
+    }
+    100%{
+		transform:translate(22px,-40px) rotate(60deg);	
+    }	
+}
+
+#stage>#levelOnePage>#parch>#livan1,
+#stage>#levelOnePage>#parch>#livan2{
+  /* display: none; */
+  width: 30px;
+  height: 42px;
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+}
+
 #stage>#levelOnePage>#zobale:hover {
   background: url("../images/Trash\ can.png") no-repeat;
   background-size: cover;
