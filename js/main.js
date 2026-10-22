@@ -1,27 +1,7 @@
-// const menuPage = document.getElementById("menuPage");
-// const levelOnePage = document.getElementById("levelOnePage");
-// const playBtn = document.getElementById("playBtn");
-
-// function showPage(pageId) {
-//   document.querySelectorAll(".page").forEach(function (page) {
-//     page.classList.add("hide");
-//   });
-
-//   document.getElementById(pageId).classList.remove("hide");
-// }
-
-// playBtn.addEventListener("click", function () {
-//   console.log("Play clicked");
-//   showPage("levelOnePage");
-// });
-
-
-auMain.play();
-
-playBtn.onclick = function(){
-	levelOnePage.className = "show";
-	menuPage.className = "hide";
-
+playBtn.onclick = function () {
+  menuPage.className = "hide";
+  levelOnePage.className = "show";
+  fillDoogh();
 }
 
 let diziBardashteShode = false;
@@ -30,7 +10,7 @@ let timerAmade;
 let timerSokhte;
 
 putDizi.onclick = function () {
-  if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht) {
+  if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     dizi.style.display = "block";
@@ -51,8 +31,7 @@ putDizi.onclick = function () {
 }
 
 dizi.onclick = function () {
-  if (dizi.className === "amade") {
-    // dizi.play();
+  if (dizi.className === "amade" && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     diziBardashteShode = true;
@@ -60,7 +39,7 @@ dizi.onclick = function () {
     dizi.style.display = "none";
     dizi.className = "";
     move(dizi1);
-  } else if (dizi.className === "sokhte") {
+  } else if (dizi.className === "sokhte" && !dooghIsUp) {
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     darhalPodkht = false;
@@ -72,16 +51,18 @@ dizi.onclick = function () {
 }
 
 zobale.onclick = function () {
-  dizi1.style.display = "none";
-  dizi2.style.display = "none";
-  diziBardashteShode = false;
-  siniBardashteShode = false;
-  sini.className = "";
-  noonInSini = false;
-  diziInSini = false;
-  dizi3.style.display = "none";
-  noon1.style.display = "none";
-  food.style.display = "none";
+  if (!dooghIsUp) {
+    dizi1.style.display = "none";
+    dizi2.style.display = "none";
+    diziBardashteShode = false;
+    siniBardashteShode = false;
+    sini.className = "";
+    noonInSini = false;
+    diziInSini = false;
+    dizi3.style.display = "none";
+    noon1.style.display = "none";
+    food.style.display = "none";
+  }
 }
 
 let noonInSini = false;
@@ -89,7 +70,7 @@ let diziInSini = false;
 let siniBardashteShode = false;
 
 noon.onclick = function () {
-  if (!diziBardashteShode) {
+  if (!diziBardashteShode && !dooghIsUp && !siniBardashteShode) {
     if (diziInSini) {
       sini.className = "full";
       noonInSini = true;
@@ -114,21 +95,54 @@ sini.onclick = function () {
       diziBardashteShode = false;
     }
   } else {
-    if (noonInSini && diziInSini) {
-      sini.className = "khali";
-      move(food);
-      diziInSini = true;
-      siniBardashteShode = true;
-    } else if (noonInSini) {
-      sini.className = "khali";
-      move(noon1);
-      siniBardashteShode = true;
+    if (!dooghIsUp) {
+      if (noonInSini && diziInSini) {
+        sini.className = "khali";
+        move(food);
+        diziInSini = true;
+        siniBardashteShode = true;
+      } else if (noonInSini) {
+        sini.className = "khali";
+        move(noon1);
+        siniBardashteShode = true;
 
-    } else if (diziInSini) {
-      sini.className = "khali";
-      move(dizi3);
-      siniBardashteShode = true;
+      } else if (diziInSini) {
+        sini.className = "khali";
+        move(dizi3);
+        siniBardashteShode = true;
+      }
     }
+  }
+}
+
+let timerDoogh;
+let timerFill;
+let dooghIsUp = false;
+
+function fillDoogh() {
+  if (!dooghIsUp) {
+    timerDoogh = setTimeout(() => {
+      parch1.className = "Up";
+    }, 300);
+    timerFill = setTimeout(() => {
+      parch1.style.display = "none";
+      livan1.style.display = "none";
+      parch1.className = "";
+      parch.className = "fill";
+    }, 2300);
+    timerFill = setTimeout(() => {
+      parch1.style.display = "block";
+      livan2.style.display = "block";
+      parch.className = "";
+    }, 8300);
+  }
+}
+
+livan2.onclick = function () {
+  if (!diziBardashteShode && !siniBardashteShode) {
+    move(doogh);
+    livan2.style.display = "none";
+    dooghIsUp = true;
   }
 }
 

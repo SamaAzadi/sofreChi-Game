@@ -15,16 +15,14 @@ body {
   position: relative;
 }
 
-.page {
+/* .page {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  position: relative;
+} */
 
 .hide {
-  display: none ;
+  display: none;
 }
 
 .show {
@@ -33,6 +31,11 @@ body {
 
 #stage>#menuPage {
   background: url("../images/menu0.png") center / contain no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 #stage>#menuPage>#playBtn {
@@ -64,8 +67,10 @@ body {
 #stage>#levelOnePage {
   background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
-  z-index: 100;
-
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 #stage>#levelOnePage>#putDizi {
@@ -164,8 +169,7 @@ body {
 }
 
 #stage>#levelOnePage>#parch{
-  border: 1px solid red;
-  background: url("../images/Pitcher/Pitcher7.png") 50% no-repeat;
+  background: url("") 50% no-repeat;
   background-size: 100px;
   width: 150px;
   height: 130px;
@@ -185,6 +189,10 @@ body {
   animation: parchUp 2s ease-in-out forwards;
 }
 
+#stage>#levelOnePage>#parch.fill{
+  animation: parchUp2 3s ease-in-out 2;
+}
+
 @keyframes parchUp{
     0%{
 		transform:translate(0,0);
@@ -195,6 +203,49 @@ body {
     100%{
 		transform:translate(22px,-40px) rotate(60deg);	
     }	
+}
+
+@keyframes parchUp2{
+    0%{
+		background-image: url(../images/Pitcher/Pitcher06.png);
+    }
+    15%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    30%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    45%{
+		background-image: url(../images/Pitcher/Pitcher9.png);
+    }
+    50%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    65%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    80%{
+		background-image: url(../images/Pitcher/Pitcher06.png);
+    }
+    95%{
+		background-image: url(../images/Pitcher/Pitcher7.png);
+    }
+    100%{
+		background-image: url(../images/Pitcher/Pitcher8.png);
+    }
+    
+}
+
+#stage>#levelOnePage>#parch>#livan2{
+  display: none;
+}
+
+#doogh{
+  width: 30px;
+  height: 42px;
+  position: fixed;
+  pointer-events: none;
+  display: none;
 }
 
 #stage>#levelOnePage>#parch>#livan1,
@@ -398,4 +449,42 @@ body {
   100% {
     background-image: url(../images/Daisy/Daisyfuel05.png);
   }
+}
+
+#stage>#levelOnePage>.star{
+  width: 32px;
+  height: 30px;
+  background: url("../images/star1.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 45px;
+}
+#stage>#levelOnePage>#star1{
+  right: 342px;
+  display: none;
+}
+#stage>#levelOnePage>#star2{
+  right: 292px;
+  display: none;
+}
+#stage>#levelOnePage>#star3{
+  right: 240px;
+  display: none;
+}
+
+#stage>#levelOnePage>#clientBox,
+#stage>#levelOnePage>#coinBox{
+  position: absolute;
+  top: 45px;
+  color: rgb(255, 238, 216);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#stage>#levelOnePage>#coinBox{
+  right: 480px;
+}
+
+#stage>#levelOnePage>#clientBox{
+  left: 530px;  
 }
