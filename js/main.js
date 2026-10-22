@@ -1,7 +1,32 @@
+auMain01.play()
+
 playBtn.onclick = function () {
   menuPage.className = "hide";
-  levelOnePage.className = "show";
-  fillDoogh();
+  SelectLevel.className = "show";
+  auClick.play()
+
+}
+levelOne.onclick = function () {
+     auClick.play()
+    SelectLevel.className = "hide";
+    levelOnePage.className = "show";
+
+
+    auMain02.play()
+    auMain01.pause()
+
+    fillDoogh();
+}
+MenuTop.onclick = function () {
+    auClick.play()
+    levelOne.className = "hide";
+   MenuSettings.className = "show";
+
+}
+closeMenuSettings.onclick = function () {
+      auClick.play()
+  levelOne.className = "show";
+   MenuSettings.className = "hide";
 }
 
 let diziBardashteShode = false;
@@ -11,6 +36,8 @@ let timerSokhte;
 
 putDizi.onclick = function () {
   if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht && !dooghIsUp) {
+            auDizi1.play();
+
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     dizi.style.display = "block";
@@ -19,6 +46,8 @@ putDizi.onclick = function () {
     timerAmade = setTimeout(() => {
       if (darhalPodkht) {
         dizi.className = "amade";
+         auDizi1.pause();
+        auDizi2.play();
       }
     }, 8000);
 
@@ -62,6 +91,7 @@ zobale.onclick = function () {
     dizi3.style.display = "none";
     noon1.style.display = "none";
     food.style.display = "none";
+    auZobale.play();
   }
 }
 
@@ -129,12 +159,13 @@ function fillDoogh() {
       livan1.style.display = "none";
       parch1.className = "";
       parch.className = "fill";
+      auDogh.play();
     }, 2300);
     timerFill = setTimeout(() => {
       parch1.style.display = "block";
       livan2.style.display = "block";
       parch.className = "";
-    }, 8300);
+    }, 8900);
   }
 }
 

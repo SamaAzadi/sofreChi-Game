@@ -10,8 +10,8 @@ body {
 } */
 
 #stage {
-  width: 100vw;
-  height: 100vh;
+  width: 1530px;
+  height: 740px;
   position: relative;
 }
 
@@ -29,7 +29,7 @@ body {
   display: block;
 }
 
-#stage>#menuPage {
+#stage > #menuPage {
   background: url("../images/menu0.png") center / contain no-repeat;
   position: relative;
   width: 100%;
@@ -38,7 +38,7 @@ body {
   left: 0;
 }
 
-#stage>#menuPage>#playBtn {
+#stage > #menuPage > #playBtn {
   background: url("../images/play.png") center / contain no-repeat;
   width: 60px;
   height: 60px;
@@ -53,7 +53,6 @@ body {
 }
 
 @keyframes moveUpDown {
-
   0%,
   100% {
     transform: translateY(0);
@@ -63,8 +62,51 @@ body {
     transform: translateY(-10px);
   }
 }
+#SelectLevel {
+  background: url("../images/Stage1Star0.png") center / contain no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#levelOne {
+  cursor: pointer;
+  background: rgba(34, 255, 0, 0.199);
+  width: 85px;
+  height: 95px;
+  position: absolute;
+  top: 200px;
+  left: 355px;
+}
 
-#stage>#levelOnePage {
+#MenuTop {
+  cursor: pointer;
+  background: rgba(0, 38, 255, 0.712);
+  width: 105px;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 350px;
+}
+#MenuSettings {
+  background: url("../images/MenuSettings.png") center / contain no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#closeMenuSettings {
+  cursor: pointer;
+  background: rgba(0, 38, 255, 0.712);
+  width: 90px;
+  height: 80px;
+  position: absolute;
+  top: 110px;
+  right: 390px;
+}
+#stage > #levelOnePage {
   background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
   width: 100%;
@@ -73,7 +115,7 @@ body {
   left: 0;
 }
 
-#stage>#levelOnePage>#putDizi {
+#stage > #levelOnePage > #putDizi {
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
   width: 120px;
@@ -124,8 +166,7 @@ body {
   display: none;
 }
 
-
-#stage>#levelOnePage>#sini {
+#stage > #levelOnePage > #sini {
   cursor: pointer;
   width: 123px;
   height: 100px;
@@ -134,31 +175,27 @@ body {
   left: 707px;
 }
 
-#stage>#levelOnePage>#sini.khali {
+#stage > #levelOnePage > #sini.khali {
   background: url("../images/zirsini.png") no-repeat 50% 100%;
   background-size: 125px;
-
 }
 
-#stage>#levelOnePage>#sini.noonOn {
+#stage > #levelOnePage > #sini.noonOn {
   background: url("../images/noon.png") no-repeat 50% 100%;
   background-size: 125px;
-
 }
 
-#stage>#levelOnePage>#sini.diziOn {
+#stage > #levelOnePage > #sini.diziOn {
   background: url("../images/diziIn.png") no-repeat 50% 100%;
   background-size: 125px;
-
 }
 
-#stage>#levelOnePage>#sini.full {
+#stage > #levelOnePage > #sini.full {
   background: url("../images/food.png") no-repeat 50% 100%;
   background-size: 125px;
-
 }
 
-#stage>#levelOnePage>#noon {
+#stage > #levelOnePage > #noon {
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
   width: 100px;
@@ -168,7 +205,7 @@ body {
   right: 720px;
 }
 
-#stage>#levelOnePage>#parch{
+#stage > #levelOnePage > #parch {
   background: url("") 50% no-repeat;
   background-size: 100px;
   width: 150px;
@@ -178,69 +215,68 @@ body {
   left: 300px;
 }
 
-#stage>#levelOnePage>#parch>#parch1{
+#stage > #levelOnePage > #parch > #parch1 {
   width: 70px;
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
 
-#stage>#levelOnePage>#parch>#parch1.Up{
+#stage > #levelOnePage > #parch > #parch1.Up {
   animation: parchUp 2s ease-in-out forwards;
 }
 
-#stage>#levelOnePage>#parch.fill{
+#stage > #levelOnePage > #parch.fill {
   animation: parchUp2 3s ease-in-out 2;
 }
 
-@keyframes parchUp{
-    0%{
-		transform:translate(0,0);
-    }
-    50%{
-		transform:translate(22px,-40px) rotate(10deg);
-    }
-    100%{
-		transform:translate(22px,-40px) rotate(60deg);	
-    }	
+@keyframes parchUp {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(22px, -40px) rotate(10deg);
+  }
+  100% {
+    transform: translate(22px, -40px) rotate(60deg);
+  }
 }
 
-@keyframes parchUp2{
-    0%{
-		background-image: url(../images/Pitcher/Pitcher06.png);
-    }
-    15%{
-		background-image: url(../images/Pitcher/Pitcher7.png);
-    }
-    30%{
-		background-image: url(../images/Pitcher/Pitcher8.png);
-    }
-    45%{
-		background-image: url(../images/Pitcher/Pitcher9.png);
-    }
-    50%{
-		background-image: url(../images/Pitcher/Pitcher8.png);
-    }
-    65%{
-		background-image: url(../images/Pitcher/Pitcher7.png);
-    }
-    80%{
-		background-image: url(../images/Pitcher/Pitcher06.png);
-    }
-    95%{
-		background-image: url(../images/Pitcher/Pitcher7.png);
-    }
-    100%{
-		background-image: url(../images/Pitcher/Pitcher8.png);
-    }
-    
+@keyframes parchUp2 {
+  0% {
+    background-image: url(../images/Pitcher/Pitcher06.png);
+  }
+  15% {
+    background-image: url(../images/Pitcher/Pitcher7.png);
+  }
+  30% {
+    background-image: url(../images/Pitcher/Pitcher8.png);
+  }
+  45% {
+    background-image: url(../images/Pitcher/Pitcher9.png);
+  }
+  50% {
+    background-image: url(../images/Pitcher/Pitcher8.png);
+  }
+  65% {
+    background-image: url(../images/Pitcher/Pitcher7.png);
+  }
+  80% {
+    background-image: url(../images/Pitcher/Pitcher06.png);
+  }
+  95% {
+    background-image: url(../images/Pitcher/Pitcher7.png);
+  }
+  100% {
+    background-image: url(../images/Pitcher/Pitcher8.png);
+  }
 }
 
-#stage>#levelOnePage>#parch>#livan2{
+#stage > #levelOnePage > #parch > #livan2 {
   display: none;
 }
 
-#doogh{
+#doogh {
   width: 30px;
   height: 42px;
   position: fixed;
@@ -248,8 +284,8 @@ body {
   display: none;
 }
 
-#stage>#levelOnePage>#parch>#livan1,
-#stage>#levelOnePage>#parch>#livan2{
+#stage > #levelOnePage > #parch > #livan1,
+#stage > #levelOnePage > #parch > #livan2 {
   /* display: none; */
   width: 30px;
   height: 42px;
@@ -258,12 +294,12 @@ body {
   right: 25px;
 }
 
-#stage>#levelOnePage>#zobale:hover {
+#stage > #levelOnePage > #zobale:hover {
   background: url("../images/Trash\ can.png") no-repeat;
   background-size: cover;
 }
 
-#stage>#levelOnePage>#zobale {
+#stage > #levelOnePage > #zobale {
   cursor: pointer;
   width: 126px;
   height: 125px;
@@ -356,7 +392,6 @@ body {
   100% {
     background-image: url(../images/Daisy/Dizi02.png);
   }
-
 }
 
 @keyframes diziAmade {
@@ -451,7 +486,7 @@ body {
   }
 }
 
-#stage>#levelOnePage>.star{
+#stage > #levelOnePage > .star {
   width: 32px;
   height: 30px;
   background: url("../images/star1.png") 50% no-repeat;
@@ -459,21 +494,21 @@ body {
   position: absolute;
   top: 45px;
 }
-#stage>#levelOnePage>#star1{
+#stage > #levelOnePage > #star1 {
   right: 342px;
   display: none;
 }
-#stage>#levelOnePage>#star2{
+#stage > #levelOnePage > #star2 {
   right: 292px;
   display: none;
 }
-#stage>#levelOnePage>#star3{
+#stage > #levelOnePage > #star3 {
   right: 240px;
   display: none;
 }
 
-#stage>#levelOnePage>#clientBox,
-#stage>#levelOnePage>#coinBox{
+#stage > #levelOnePage > #clientBox,
+#stage > #levelOnePage > #coinBox {
   position: absolute;
   top: 45px;
   color: rgb(255, 238, 216);
@@ -481,10 +516,10 @@ body {
   font-size: 20px;
 }
 
-#stage>#levelOnePage>#coinBox{
+#stage > #levelOnePage > #coinBox {
   right: 480px;
 }
 
-#stage>#levelOnePage>#clientBox{
-  left: 530px;  
+#stage > #levelOnePage > #clientBox {
+  left: 530px;
 }

@@ -1,44 +1,56 @@
 <!doctype html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
 
-<head>
-  <link rel="stylesheet" href="style/main.css" />
-</head>
+  <body>
+    <audio id="auMain01" src="voice/main01.mp3"></audio>
+    <audio id="auMain02" src="voice/main02.wav"></audio>
+    <audio id="auClick" src="voice/click.wav"></audio>
+    <audio id="auDizi1" src="voice/dizi.wav"></audio>
+    <audio id="auDizi2" src="voice/dizipokht.wav"></audio>
+    <audio id="auDogh" src="voice/dogh.wav"></audio>
+    <audio id="auWin" src="voice/win.wav"></audio>
+    <audio id="auZobale" src="voice/zobale.wav"></audio>
+    <!-- <video id="vidStart" src="video/vi02.mp4"></video> -->
+    <main id="stage">
+      <section id="menuPage" class="page show">
+        <button id="playBtn"></button>
+      </section>
+      <section id="SelectLevel" class="page hide">
+        <div id="MenuTop"></div>
+        <div id="MenuSettings" class="hide">
+          <div id="closeMenuSettings"></div>
+        </div>
+        <div id="levelOne"></div>
+      </section>
+      <section id="levelOnePage" class="page hide">
+        <div class="star" id="star1"></div>
+        <div class="star" id="star2"></div>
+        <div class="star" id="star3"></div>
+        <div id="coinBox">0</div>
+        <div id="clientBox">4</div>
 
-<body>
-  <!-- <video id="vidStart" src="video/vi02.mp4"></video> -->
-  <main id="stage">
-    <section id="menuPage" class="page show">
-      <button id="playBtn"></button>
-    </section>
-    <section id="levelOnePage" class="page hide">
-      <div class="star" id="star1"></div>
-      <div class="star" id="star2"></div>
-      <div class="star" id="star3"></div>
-      <div id="coinBox">0</div>
-      <div id="clientBox">4</div>
+        <div id="dizi"></div>
+        <div id="putDizi"></div>
+        <div id="sini"></div>
+        <div id="noon"></div>
+        <div id="parch">
+          <img id="parch1" src="images/Pitcher/Pitcher01.png" />
+          <img id="livan1" src="images/livan.png" />
+          <img id="livan2" src="images/dooghFull.png" />
+        </div>
+        <div id="zobale"></div>
+      </section>
+    </main>
+    <img id="dizi1" src="images/Daisy/Dizi07.png" />
+    <img id="dizi2" src="images/Daisy/Daisyfuel02.png" />
+    <img id="noon1" src="images/noonSini.png" />
+    <img id="dizi3" src="images/disiSiniUp.png" />
+    <img id="food" src="images/Daisy/fullFood.png" />
+    <img id="doogh" src="images/dooghFull.png" />
 
-
-      <div id="dizi"></div>
-      <div id="putDizi"></div>
-      <div id="sini"></div>
-      <div id="noon"></div>
-      <div id="parch">
-        <img id="parch1" src="images/Pitcher/Pitcher01.png">
-        <img id="livan1" src="images/livan.png">
-        <img id="livan2" src="images/dooghFull.png">
-      </div>
-      <div id="zobale"></div>
-    </section>
-  </main>
-  <img id="dizi1" src="images/Daisy/Dizi07.png">
-  <img id="dizi2" src="images/Daisy/Daisyfuel02.png">
-  <img id="noon1" src="images/noonSini.png">
-  <img id="dizi3" src="images/disiSiniUp.png">
-  <img id="food" src="images/Daisy/fullFood.png">
-  <img id="doogh" src="images/dooghFull.png">
-
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
