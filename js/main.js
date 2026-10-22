@@ -1,19 +1,8 @@
-const menuPage = document.getElementById("menuPage");
-const levelOnePage = document.getElementById("levelOnePage");
-const playBtn = document.getElementById("playBtn");
-
-function showPage(pageId) {
-  document.querySelectorAll(".page").forEach(function (page) {
-    page.classList.add("hide");
-  });
-
-  document.getElementById(pageId).classList.remove("hide");
+playBtn.onclick = function () {
+  menuPage.className = "hide";
+  levelOnePage.className = "show";
+  fillDoogh();
 }
-
-playBtn.addEventListener("click", function () {
-  console.log("Play clicked");
-  showPage("levelOnePage");
-});
 
 let diziBardashteShode = false;
 let darhalPodkht = false;
@@ -62,16 +51,18 @@ dizi.onclick = function () {
 }
 
 zobale.onclick = function () {
-  dizi1.style.display = "none";
-  dizi2.style.display = "none";
-  diziBardashteShode = false;
-  siniBardashteShode = false;
-  sini.className = "";
-  noonInSini = false;
-  diziInSini = false;
-  dizi3.style.display = "none";
-  noon1.style.display = "none";
-  food.style.display = "none";
+  if (!dooghIsUp) {
+    dizi1.style.display = "none";
+    dizi2.style.display = "none";
+    diziBardashteShode = false;
+    siniBardashteShode = false;
+    sini.className = "";
+    noonInSini = false;
+    diziInSini = false;
+    dizi3.style.display = "none";
+    noon1.style.display = "none";
+    food.style.display = "none";
+  }
 }
 
 let noonInSini = false;
@@ -79,7 +70,7 @@ let diziInSini = false;
 let siniBardashteShode = false;
 
 noon.onclick = function () {
-  if (!diziBardashteShode && !dooghIsUp) {
+  if (!diziBardashteShode && !dooghIsUp && !siniBardashteShode) {
     if (diziInSini) {
       sini.className = "full";
       noonInSini = true;
@@ -104,20 +95,22 @@ sini.onclick = function () {
       diziBardashteShode = false;
     }
   } else {
-    if (noonInSini && diziInSini && !dooghIsUp) {
-      sini.className = "khali";
-      move(food);
-      diziInSini = true;
-      siniBardashteShode = true;
-    } else if (noonInSini && !dooghIsUp) {
-      sini.className = "khali";
-      move(noon1);
-      siniBardashteShode = true;
+    if (!dooghIsUp) {
+      if (noonInSini && diziInSini) {
+        sini.className = "khali";
+        move(food);
+        diziInSini = true;
+        siniBardashteShode = true;
+      } else if (noonInSini) {
+        sini.className = "khali";
+        move(noon1);
+        siniBardashteShode = true;
 
-    } else if (diziInSini && !dooghIsUp) {
-      sini.className = "khali";
-      move(dizi3);
-      siniBardashteShode = true;
+      } else if (diziInSini) {
+        sini.className = "khali";
+        move(dizi3);
+        siniBardashteShode = true;
+      }
     }
   }
 }
@@ -126,10 +119,8 @@ let timerDoogh;
 let timerFill;
 let dooghIsUp = false;
 
-fillDoogh();
-
-function fillDoogh(){
-  if (!dooghIsUp){
+function fillDoogh() {
+  if (!dooghIsUp) {
     timerDoogh = setTimeout(() => {
       parch1.className = "Up";
     }, 300);
@@ -147,8 +138,8 @@ function fillDoogh(){
   }
 }
 
-livan2.onclick = function(){
-  if(!diziBardashteShode && !siniBardashteShode){
+livan2.onclick = function () {
+  if (!diziBardashteShode && !siniBardashteShode) {
     move(doogh);
     livan2.style.display = "none";
     dooghIsUp = true;
