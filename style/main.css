@@ -24,7 +24,7 @@ body {
 }
 
 .hide {
-  display: none !important;
+  display: none ;
 }
 
 .show {
@@ -64,6 +64,8 @@ body {
 #stage>#levelOnePage {
   background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
+  z-index: 100;
+
 }
 
 #stage>#levelOnePage>#putDizi {

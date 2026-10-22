@@ -1,19 +1,28 @@
-const menuPage = document.getElementById("menuPage");
-const levelOnePage = document.getElementById("levelOnePage");
-const playBtn = document.getElementById("playBtn");
+// const menuPage = document.getElementById("menuPage");
+// const levelOnePage = document.getElementById("levelOnePage");
+// const playBtn = document.getElementById("playBtn");
 
-function showPage(pageId) {
-  document.querySelectorAll(".page").forEach(function (page) {
-    page.classList.add("hide");
-  });
+// function showPage(pageId) {
+//   document.querySelectorAll(".page").forEach(function (page) {
+//     page.classList.add("hide");
+//   });
 
-  document.getElementById(pageId).classList.remove("hide");
+//   document.getElementById(pageId).classList.remove("hide");
+// }
+
+// playBtn.addEventListener("click", function () {
+//   console.log("Play clicked");
+//   showPage("levelOnePage");
+// });
+
+
+auMain.play();
+
+playBtn.onclick = function(){
+	levelOnePage.className = "show";
+	menuPage.className = "hide";
+
 }
-
-playBtn.addEventListener("click", function () {
-  console.log("Play clicked");
-  showPage("levelOnePage");
-});
 
 let diziBardashteShode = false;
 let darhalPodkht = false;
@@ -43,6 +52,7 @@ putDizi.onclick = function () {
 
 dizi.onclick = function () {
   if (dizi.className === "amade") {
+    // dizi.play();
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
     diziBardashteShode = true;
