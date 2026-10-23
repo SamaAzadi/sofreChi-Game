@@ -10,8 +10,8 @@ body {
 } */
 
 #stage {
-  width: 1530px;
-  height: 740px;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
@@ -96,7 +96,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-    z-index: 1;
+  z-index: 1;
 }
 #MenuSettings {
   background: url("../images/MenuSettings.png") center / contain no-repeat;
@@ -172,6 +172,23 @@ body {
   left: 0;
 }
 
+#ghelyoon{
+  height: 270px;
+  position: absolute;
+  right: 0;
+  bottom: 310px;
+  z-index: 10;
+}
+
+#zarf{
+  height: 210px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  bottom: 309px;
+  z-index: 10;
+}
+
 #stage > #levelOnePage > #putDizi {
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
@@ -180,6 +197,77 @@ body {
   position: absolute;
   bottom: 50px;
   right: 350px;
+}
+
+#stage > #levelOnePage>#man{
+  background: url("../images/man/man1.png") no-repeat 0% 100%;
+  background-size: 100px;
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: -50px;
+    /* left: 50px; */
+  bottom: 430px;
+  display: none;
+  --stop-x: 850px;
+}
+
+#stage > #levelOnePage>#man>#sefaresh{
+  height: 100%;
+  width: 70%;
+  /* border: 1px solid red; */
+  background: url("../images/backSfaresh.png") no-repeat 50%;
+  background-size: 140px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  display: none;
+  transition: 0.5s;
+}
+
+#man.manCame{
+  animation: moveMan 8s linear forwards;
+}
+#man.happyMan{
+  /* animation: manHappy 8s linear infinite forwards; */
+  transform: translateX(var(--stop-x));
+  animation: manHappy 8s steps(1, end) infinite;
+}
+
+@keyframes moveMan {
+	from { transform: translateX(0); }
+  to   { transform: translateX(var(--stop-x)); }
+}
+
+@keyframes manHappy {
+  0% {
+    background-image: url(../images/man/man1.png);
+  }
+  25% {
+    background-image: url(../images/man/man02.png);
+
+  }
+  50% {
+    background-image: url(../images/man/man03.png);
+  }
+  75% {
+    background-image: url(../images/man/man04.png);
+  }
+  100% {
+    background-image: url(../images/man/man03.png);
+  }
+}
+
+#stage > #levelOnePage>#man>#sefaresh>#diziMan{
+  /* border: 1px solid red; */
+  width: 70px;
+  height: 60px;
+  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 42px;
+  bottom: 70px;
 }
 
 #dizi {
@@ -212,6 +300,7 @@ body {
   width: 50px;
   pointer-events: none;
   display: none;
+  z-index: 20;
 }
 
 #dizi3,
@@ -221,6 +310,7 @@ body {
   width: 120px;
   pointer-events: none;
   display: none;
+  z-index: 20;
 }
 
 #stage > #levelOnePage > #sini {
@@ -339,6 +429,7 @@ body {
   position: fixed;
   pointer-events: none;
   display: none;
+  z-index: 20;
 }
 
 #stage > #levelOnePage > #parch > #livan1,

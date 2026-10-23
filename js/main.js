@@ -4,7 +4,6 @@ playBtn.onclick = function () {
   menuPage.className = "hide";
   SelectLevel.className = "show";
   auClick.play()
-
 }
 levelOne.onclick = function () {
      auClick.play()
@@ -16,6 +15,7 @@ levelOne.onclick = function () {
     auMain01.pause()
 
     fillDoogh();
+    moshtary1();
 }
 MenuTop.onclick = function () {
     auClick.play()
@@ -212,4 +212,40 @@ function move(x) {
     x.style.left = e.clientX + "px";
     x.style.top = e.clientY + "px";
   });
+}
+
+
+// function moshtary1(){
+//    setTimeout(() => {
+//       man.className = "manCame";
+//       man.style.display = "block";
+//     }, 8000);
+//     setTimeout(() => {
+//       sefaresh.style.display = "block";
+//       man.className = "happyMan";
+//     }, 16000);
+// }
+
+function moshtary1() {
+  setTimeout(() => {
+    man.style.display = "block";
+    man.className = "manCame";
+  }, 8000);
+}
+
+man.addEventListener("animationend", function (e) {
+  if (e.animationName === "moveMan") {
+    sefaresh.style.display = "block";
+    man.className = "happyMan";
+  }
+});
+
+man.onclick = function(){
+  if(food.style.display == "block" && man.className != "manCame"){
+    sefaresh.style.display = "none";
+    food.style.display = "none";
+    siniBardashteShode = false;
+    noonInSini = false;
+    diziInSini = false;
+  }
 }
