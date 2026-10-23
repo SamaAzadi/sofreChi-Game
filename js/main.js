@@ -21,12 +21,41 @@ MenuTop.onclick = function () {
     auClick.play()
     levelOne.className = "hide";
    MenuSettings.className = "show";
-
+   backMenuSettings.className = "hide"
 }
 closeMenuSettings.onclick = function () {
-      auClick.play()
+    auClick.play()
   levelOne.className = "show";
-   MenuSettings.className = "hide";
+  MenuSettings.className = "hide";
+}
+
+
+Settings.onclick = function () {
+    auClick.play()
+
+    levelOne.className = "hide";
+    MenuSettings.className = "hide";
+
+    backMenuSettings.className = "show";
+    Settings01.className = "show";
+
+
+}
+closeSettings01.onclick = function () {
+    auClick.play()
+ levelOne.className = "show";
+    MenuSettings.className = "show";
+
+    backMenuSettings.className = "hide";
+    Settings01.className = "hide";
+
+}
+
+HomePage.onclick = function () {
+    auClick.play()
+     levelOne.className = "hide";
+    MenuSettings.className = "hide";
+    menuPage.className = "show";
 }
 
 let diziBardashteShode = false;

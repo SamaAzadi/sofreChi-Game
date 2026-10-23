@@ -72,7 +72,7 @@ body {
 }
 #levelOne {
   cursor: pointer;
-  background: rgba(34, 255, 0, 0.199);
+  /* background: rgba(34, 255, 0, 0.199); */
   width: 85px;
   height: 95px;
   position: absolute;
@@ -82,12 +82,21 @@ body {
 
 #MenuTop {
   cursor: pointer;
-  background: rgba(0, 38, 255, 0.712);
+  /* background: rgba(0, 38, 255, 0.712); */
   width: 105px;
   height: 40px;
   position: absolute;
   top: 30px;
   left: 350px;
+}
+#backMenuSettings {
+  background: url("../images/backMenuSettings.png") center / contain no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+    z-index: 1;
 }
 #MenuSettings {
   background: url("../images/MenuSettings.png") center / contain no-repeat;
@@ -97,15 +106,63 @@ body {
   top: 0;
   left: 0;
 }
-#closeMenuSettings {
+.closeMenuSettings {
   cursor: pointer;
-  background: rgba(0, 38, 255, 0.712);
-  width: 90px;
-  height: 80px;
+  /* background: rgba(0, 38, 255, 0.712); */
+  width: 110px;
+  height: 180px;
   position: absolute;
-  top: 110px;
-  right: 390px;
+  top: 10px;
+  right: 370px;
 }
+#Settings {
+  cursor: pointer;
+  /* background: rgba(0, 255, 179, 0.712); */
+  width: 340px;
+  height: 90px;
+  position: absolute;
+  top: 370px;
+  left: 580px;
+}
+#Settings01 {
+  background: url("../images/seeting01.png") center / contain no-repeat;
+  position: absolute;
+  width: 99%;
+  height: 93%;
+  top: 80px;
+  left: 0;
+    z-index: 2;
+}
+#HomePage {
+  cursor: pointer;
+  /* background: rgba(0, 38, 255, 0.712); */
+  width: 340px;
+  height: 90px;
+  position: absolute;
+  top: 490px;
+  left: 580px;
+}
+/*
+
+
+#Creators{
+       cursor: pointer;
+  background: rgba(255, 0, 255, 0.712);
+  width: 320px;
+  height: 90px;
+  position: absolute;
+  top: 370px;
+  left: 590px;
+}
+#MusicGame{
+    cursor: pointer;
+  background: rgba(51, 255, 0, 0.438);
+  width: 320px;
+  height: 90px;
+  position: absolute;
+  top: 250px;
+  left: 590px;
+} */
 #stage > #levelOnePage {
   background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
