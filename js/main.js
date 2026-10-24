@@ -29,12 +29,13 @@ MenuTop.onclick = function () {
     auClick.play()
   levelOne.className = "hide";
    MenuSettings.className = "show";
-   backMenuSettings.className = "hide"
+  backMenuSettings.className = "show";
 }
 closeMenuSettings.onclick = function () {
     auClick.play()
   levelOne.className = "show";
   MenuSettings.className = "hide";
+   backMenuSettings.className = "hide";
 }
 
 
@@ -54,7 +55,7 @@ closeSettings01.onclick = function () {
  levelOne.className = "show";
     MenuSettings.className = "show";
 
-    backMenuSettings.className = "hide";
+    backMenuSettings.className = "show";
     Settings01.className = "hide";
 
 }

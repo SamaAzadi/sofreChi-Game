@@ -79,7 +79,7 @@ body {
   top: 200px;
   left: 355px;
 }
-#MenuLevelOnePage{
+#MenuLevelOnePage {
   cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
   width: 105px;
@@ -88,18 +88,17 @@ body {
   top: 30px;
   left: 270px;
 }
-#MenuLevelOnePage01{
-    background: url("../images/MenuLevelOnePage.png") center / contain no-repeat;
+#MenuLevelOnePage01 {
+  background: url("../images/MenuLevelOnePage.png") center / contain no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index:10 ;
-   
+  z-index: 10;
 }
-#Continued{
-     cursor: pointer;
+#Continued {
+  cursor: pointer;
   /* background: rgba(0, 217, 255, 0.712); */
   width: 330px;
   height: 90px;
@@ -107,8 +106,8 @@ body {
   top: 180px;
   left: 630px;
 }
-#Restart{
-     cursor: pointer;
+#Restart {
+  cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
   width: 330px;
   height: 90px;
@@ -116,19 +115,18 @@ body {
   top: 330px;
   left: 630px;
 }
-#MenuLevelOnePage01 > #HomePage01{
-       cursor: pointer;
+#MenuLevelOnePage01 > #HomePage01 {
+  cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
   width: 330px;
   height: 90px;
   position: absolute;
   top: 460px;
   left: 620px;
-
 }
 
-#close{
-    cursor: pointer;
+#close {
+  cursor: pointer;
   /* background: rgba(0, 38, 255, 0.712); */
   width: 90px;
   height: 80px;
@@ -152,15 +150,16 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-    z-index: 1;
+  z-index: 1;
 }
 #MenuSettings {
-  background: url("../images/MenuSettings.png") center / contain no-repeat;
+  background: url("../images/seeting.png") center / contain no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 90px;
   left: 0;
+  z-index: 2;
 }
 .closeMenuSettings {
   cursor: pointer;
@@ -178,7 +177,7 @@ body {
   width: 340px;
   height: 90px;
   position: absolute;
-  top: 370px;
+  top: 280px;
   left: 580px;
 }
 #Settings01 {
@@ -188,7 +187,7 @@ body {
   height: 93%;
   top: 80px;
   left: 0;
-    z-index: 2;
+  z-index: 2;
 }
 #HomePage {
   cursor: pointer;
@@ -196,7 +195,7 @@ body {
   width: 340px;
   height: 90px;
   position: absolute;
-  top: 490px;
+  top: 400px;
   left: 580px;
 }
 /*
