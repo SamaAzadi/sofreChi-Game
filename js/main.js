@@ -1,3 +1,10 @@
+if (sessionStorage.getItem("restart") === "yes") {
+    menuPage.className = "hide";
+    SelectLevel.className = "hide";
+    levelOnePage.className = "show";
+    sessionStorage.removeItem("restart");
+}
+
 auMain01.play()
 
 playBtn.onclick = function () {
@@ -11,6 +18,7 @@ levelOne.onclick = function () {
     levelOnePage.className = "show";
 
 
+
     auMain02.play()
     auMain01.pause()
 
@@ -19,14 +27,15 @@ levelOne.onclick = function () {
 }
 MenuTop.onclick = function () {
     auClick.play()
-    levelOne.className = "hide";
+  levelOne.className = "hide";
    MenuSettings.className = "show";
-   backMenuSettings.className = "hide"
+  backMenuSettings.className = "show";
 }
 closeMenuSettings.onclick = function () {
     auClick.play()
   levelOne.className = "show";
   MenuSettings.className = "hide";
+   backMenuSettings.className = "hide";
 }
 
 
@@ -46,7 +55,7 @@ closeSettings01.onclick = function () {
  levelOne.className = "show";
     MenuSettings.className = "show";
 
-    backMenuSettings.className = "hide";
+    backMenuSettings.className = "show";
     Settings01.className = "hide";
 
 }
@@ -58,6 +67,32 @@ HomePage.onclick = function () {
     menuPage.className = "show";
 }
 
+MenuLevelOnePage.onclick =function(){
+  auClick.play()
+  MenuLevelOnePage01.className = "show"
+  edame.className= "show"
+}
+Restart.onclick = function () {
+    auClick.play();
+    sessionStorage.setItem("restart", "yes");
+    location.reload();
+};
+Continued.onclick = function(){
+   auClick.play()
+   MenuLevelOnePage01.className = "hide"
+
+}
+HomePage01.onclick = function (){
+  auClick.play()
+   MenuLevelOnePage01.className = "hide"
+   menuPage.className = "show"
+}
+close.onclick = function () {
+    auClick.play();
+
+    MenuLevelOnePage01.className = "hide";
+    levelOnePage.className = "show";
+};
 let diziBardashteShode = false;
 let darhalPodkht = false;
 let timerAmade;
