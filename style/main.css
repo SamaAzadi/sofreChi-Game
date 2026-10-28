@@ -29,7 +29,7 @@ body {
   display: block;
 }
 
-#stage > #menuPage {
+#stage>#menuPage {
   background: url("../images/menu0.png") center / contain no-repeat;
   position: relative;
   width: 100%;
@@ -38,7 +38,7 @@ body {
   left: 0;
 }
 
-#stage > #menuPage > #playBtn {
+#stage>#menuPage>#playBtn {
   background: url("../images/play.png") center / contain no-repeat;
   width: 60px;
   height: 60px;
@@ -53,6 +53,7 @@ body {
 }
 
 @keyframes moveUpDown {
+
   0%,
   100% {
     transform: translateY(0);
@@ -62,6 +63,7 @@ body {
     transform: translateY(-10px);
   }
 }
+
 #SelectLevel {
   background: url("../images/Stage1Star0.png") center / contain no-repeat;
   position: relative;
@@ -70,6 +72,7 @@ body {
   top: 0;
   left: 0;
 }
+
 #levelOne {
   cursor: pointer;
   /* background: rgba(34, 255, 0, 0.199); */
@@ -79,6 +82,7 @@ body {
   top: 200px;
   left: 355px;
 }
+
 #MenuLevelOnePage {
   cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
@@ -88,6 +92,7 @@ body {
   top: 30px;
   left: 270px;
 }
+
 #MenuLevelOnePage01 {
   background: url("../images/MenuLevelOnePage.png") center / contain no-repeat;
   position: absolute;
@@ -97,6 +102,7 @@ body {
   left: 0;
   z-index: 10;
 }
+
 #Continued {
   cursor: pointer;
   /* background: rgba(0, 217, 255, 0.712); */
@@ -106,6 +112,7 @@ body {
   top: 180px;
   left: 630px;
 }
+
 #Restart {
   cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
@@ -115,7 +122,8 @@ body {
   top: 330px;
   left: 630px;
 }
-#MenuLevelOnePage01 > #HomePage01 {
+
+#MenuLevelOnePage01>#HomePage01 {
   cursor: pointer;
   /* background: rgba(255, 0, 0, 0.712); */
   width: 330px;
@@ -134,6 +142,7 @@ body {
   top: 48px;
   right: 325px;
 }
+
 #MenuTop {
   cursor: pointer;
   /* background: rgba(0, 38, 255, 0.712); */
@@ -143,6 +152,7 @@ body {
   top: 30px;
   left: 350px;
 }
+
 #backMenuSettings {
   background: url("../images/backMenuSettings.png") center / contain no-repeat;
   position: absolute;
@@ -152,6 +162,7 @@ body {
   left: 0;
   z-index: 1;
 }
+
 #MenuSettings {
   background: url("../images/seeting.png") center / contain no-repeat;
   position: absolute;
@@ -161,6 +172,7 @@ body {
   left: 0;
   z-index: 2;
 }
+
 .closeMenuSettings {
   cursor: pointer;
   /* background: rgba(0, 38, 255, 0.712); */
@@ -171,6 +183,7 @@ body {
   right: 370px;
   z-index: 100;
 }
+
 #Settings {
   cursor: pointer;
   /* background: rgba(0, 255, 179, 0.712); */
@@ -180,6 +193,7 @@ body {
   top: 280px;
   left: 580px;
 }
+
 #Settings01 {
   background: url("../images/seeting01.png") center / contain no-repeat;
   position: absolute;
@@ -189,6 +203,7 @@ body {
   left: 0;
   z-index: 2;
 }
+
 #HomePage {
   cursor: pointer;
   /* background: rgba(0, 38, 255, 0.712); */
@@ -198,6 +213,7 @@ body {
   top: 400px;
   left: 580px;
 }
+
 /*
 
 
@@ -219,7 +235,7 @@ body {
   top: 250px;
   left: 590px;
 } */
-#stage > #levelOnePage {
+#stage>#levelOnePage {
   background: url("../images/bg1.png") center / contain no-repeat;
   position: relative;
   width: 100%;
@@ -228,7 +244,7 @@ body {
   left: 0;
 }
 
-#ghelyoon{
+#ghelyoon {
   height: 270px;
   position: absolute;
   right: 0;
@@ -236,7 +252,7 @@ body {
   z-index: 10;
 }
 
-#zarf{
+#zarf {
   height: 210px;
   width: 300px;
   position: absolute;
@@ -245,7 +261,7 @@ body {
   z-index: 10;
 }
 
-#stage > #levelOnePage > #putDizi {
+#stage>#levelOnePage>#putDizi {
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
   width: 120px;
@@ -255,7 +271,7 @@ body {
   right: 350px;
 }
 
-#stage > #levelOnePage>#man{
+#stage>#levelOnePage>#man {
   background: url("../images/man/man1.png") no-repeat 0% 100%;
   background-size: 100px;
   /* border: 1px solid red; */
@@ -263,13 +279,13 @@ body {
   height: 210px;
   position: absolute;
   left: -50px;
-    /* left: 50px; */
+  /* left: 50px; */
   bottom: 430px;
   display: none;
   --stop-x: 850px;
 }
 
-#stage > #levelOnePage>#man>#sefaresh{
+#stage>#levelOnePage>#man>#sefaresh {
   height: 100%;
   width: 70%;
   /* border: 1px solid red; */
@@ -282,40 +298,174 @@ body {
   transition: 0.5s;
 }
 
-#man.manCame{
+#man.manCame {
   animation: moveMan 8s linear forwards;
 }
-#man.happyMan{
+
+#man.happyMan {
   /* animation: manHappy 8s linear infinite forwards; */
   transform: translateX(var(--stop-x));
-  animation: manHappy 8s steps(1, end) infinite;
+  animation: manHappy 7s steps(1, end) 3;
+}
+
+#man.angryMan {
+  transform: translateX(var(--stop-x));
+  animation: manAngry 22s steps(1, end) infinite;
 }
 
 @keyframes moveMan {
-	from { transform: translateX(0); }
-  to   { transform: translateX(var(--stop-x)); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--stop-x));
+  }
+
+  0% {
+    background-image: url(../images/man/man0.png);
+  }
+
+  10% {
+    background-image: url(../images/man/man0bala.png);
+
+  }
+
+  20% {
+    background-image: url(../images/man/man0paeen.png);
+  }
+
+  30% {
+    background-image: url(../images/man/man0bala.png);
+  }
+
+  40% {
+    background-image: url(../images/man/man0.png);
+  }
+
+  50% {
+    background-image: url(../images/man/man0.png);
+  }
+
+  60% {
+    background-image: url(../images/man/man0bala.png);
+
+  }
+
+  70% {
+    background-image: url(../images/man/man0paeen.png);
+  }
+
+  80% {
+    background-image: url(../images/man/man0bala.png);
+  }
+
+  90% {
+    background-image: url(../images/man/man0.png);
+  }
+
+  100% {
+    background-image: url(../images/man/man0paeen.png);
+  }
 }
 
 @keyframes manHappy {
   0% {
-    background-image: url(../images/man/man1.png);
+    background-image: url(../images/man/man01.png);
   }
+
   25% {
     background-image: url(../images/man/man02.png);
 
   }
+
   50% {
     background-image: url(../images/man/man03.png);
   }
+
   75% {
     background-image: url(../images/man/man04.png);
   }
+
   100% {
     background-image: url(../images/man/man03.png);
   }
 }
 
-#stage > #levelOnePage>#man>#sefaresh>#diziMan{
+@keyframes manAngry {
+  0% {
+    background-image: url(../images/man/man05.png);
+  }
+
+  5% {
+    background-image: url(../images/man/man06.png);
+
+  }
+
+  15% {
+    background-image: url(../images/man/man05.png);
+  }
+
+  20% {
+    background-image: url(../images/man/man06.png);
+  }
+
+  25% {
+    background-image: url(../images/man/man05.png);
+  }
+
+  30% {
+    background-image: url(../images/man/man06.png);
+
+  }
+
+  35% {
+    background-image: url(../images/man/man05.png);
+  }
+
+  40% {
+    background-image: url(../images/man/man06.png);
+  }
+
+  45% {
+    background-image: url(../images/man/man07.png);
+  }
+  50% {
+    background-image: url(../images/man/man08.png);
+  }
+  55% {
+    background-image: url(../images/man/man07.png);
+  }
+  60% {
+    background-image: url(../images/man/man08.png);
+  }
+  65% {
+    background-image: url(../images/man/man07.png);
+  }
+  70% {
+    background-image: url(../images/man/man08.png);
+  }
+  75% {
+    background-image: url(../images/man/man07.png);
+  }
+80% {
+    background-image: url(../images/man/man08.png);
+  }
+  85% {
+    background-image: url(../images/man/man07.png);
+  }
+  90% {
+    background-image: url(../images/man/man08.png);
+  }
+  95% {
+    background-image: url(../images/man/man07.png);
+  }
+  100% {
+    background-image: url(../images/man/man08.png);
+  }
+}
+
+#stage>#levelOnePage>#man>#sefaresh>#diziMan {
   /* border: 1px solid red; */
   width: 70px;
   height: 60px;
@@ -324,6 +474,54 @@ body {
   position: absolute;
   right: 42px;
   bottom: 70px;
+}
+
+#stage>#levelOnePage>#man>#sefaresh>.timers {
+  position: absolute;
+  bottom: 15px;
+  right: 15%;
+  height: 85%;
+  width: 5%;
+  background: rgb(59, 255, 59);
+  border-radius: 10px;
+  transform-origin: bottom;
+  animation: timer 40s linear forwards, timerColor 40s linear forwards;
+}
+
+@keyframes timer {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes timerColor {
+  0% {
+    background: rgb(59, 255, 59);
+  }
+
+  50% {
+    background: rgb(59, 255, 59);
+  }
+
+  50.1% {
+    background: yellow;
+  }
+
+  70% {
+    background: yellow;
+  }
+
+  70.1% {
+    background: red;
+  }
+
+  100% {
+    background: red;
+  }
 }
 
 #dizi {
@@ -369,7 +567,7 @@ body {
   z-index: 20;
 }
 
-#stage > #levelOnePage > #sini {
+#stage>#levelOnePage>#sini {
   cursor: pointer;
   width: 123px;
   height: 100px;
@@ -378,27 +576,27 @@ body {
   left: 707px;
 }
 
-#stage > #levelOnePage > #sini.khali {
+#stage>#levelOnePage>#sini.khali {
   background: url("../images/zirsini.png") no-repeat 50% 100%;
   background-size: 125px;
 }
 
-#stage > #levelOnePage > #sini.noonOn {
+#stage>#levelOnePage>#sini.noonOn {
   background: url("../images/noon.png") no-repeat 50% 100%;
   background-size: 125px;
 }
 
-#stage > #levelOnePage > #sini.diziOn {
+#stage>#levelOnePage>#sini.diziOn {
   background: url("../images/diziIn.png") no-repeat 50% 100%;
   background-size: 125px;
 }
 
-#stage > #levelOnePage > #sini.full {
+#stage>#levelOnePage>#sini.full {
   background: url("../images/food.png") no-repeat 50% 100%;
   background-size: 125px;
 }
 
-#stage > #levelOnePage > #noon {
+#stage>#levelOnePage>#noon {
   cursor: pointer;
   /* background: rgb(34, 255, 0); */
   width: 100px;
@@ -408,7 +606,7 @@ body {
   right: 720px;
 }
 
-#stage > #levelOnePage > #parch {
+#stage>#levelOnePage>#parch {
   background: url("") 50% no-repeat;
   background-size: 100px;
   width: 150px;
@@ -418,18 +616,18 @@ body {
   left: 300px;
 }
 
-#stage > #levelOnePage > #parch > #parch1 {
+#stage>#levelOnePage>#parch>#parch1 {
   width: 70px;
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
 
-#stage > #levelOnePage > #parch > #parch1.Up {
+#stage>#levelOnePage>#parch>#parch1.Up {
   animation: parchUp 2s ease-in-out forwards;
 }
 
-#stage > #levelOnePage > #parch.fill {
+#stage>#levelOnePage>#parch.fill {
   animation: parchUp2 3s ease-in-out 2;
 }
 
@@ -437,9 +635,11 @@ body {
   0% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(22px, -40px) rotate(10deg);
   }
+
   100% {
     transform: translate(22px, -40px) rotate(60deg);
   }
@@ -449,33 +649,41 @@ body {
   0% {
     background-image: url(../images/Pitcher/Pitcher06.png);
   }
+
   15% {
     background-image: url(../images/Pitcher/Pitcher7.png);
   }
+
   30% {
     background-image: url(../images/Pitcher/Pitcher8.png);
   }
+
   45% {
     background-image: url(../images/Pitcher/Pitcher9.png);
   }
+
   50% {
     background-image: url(../images/Pitcher/Pitcher8.png);
   }
+
   65% {
     background-image: url(../images/Pitcher/Pitcher7.png);
   }
+
   80% {
     background-image: url(../images/Pitcher/Pitcher06.png);
   }
+
   95% {
     background-image: url(../images/Pitcher/Pitcher7.png);
   }
+
   100% {
     background-image: url(../images/Pitcher/Pitcher8.png);
   }
 }
 
-#stage > #levelOnePage > #parch > #livan2 {
+#stage>#levelOnePage>#parch>#livan2 {
   display: none;
 }
 
@@ -488,8 +696,8 @@ body {
   z-index: 20;
 }
 
-#stage > #levelOnePage > #parch > #livan1,
-#stage > #levelOnePage > #parch > #livan2 {
+#stage>#levelOnePage>#parch>#livan1,
+#stage>#levelOnePage>#parch>#livan2 {
   /* display: none; */
   width: 30px;
   height: 42px;
@@ -498,12 +706,12 @@ body {
   right: 25px;
 }
 
-#stage > #levelOnePage > #zobale:hover {
+#stage>#levelOnePage>#zobale:hover {
   background: url("../images/Trash\ can.png") no-repeat;
   background-size: cover;
 }
 
-#stage > #levelOnePage > #zobale {
+#stage>#levelOnePage>#zobale {
   cursor: pointer;
   width: 126px;
   height: 125px;
@@ -690,7 +898,7 @@ body {
   }
 }
 
-#stage > #levelOnePage > .star {
+#stage>#levelOnePage>.star {
   width: 32px;
   height: 30px;
   background: url("../images/star1.png") 50% no-repeat;
@@ -698,21 +906,24 @@ body {
   position: absolute;
   top: 45px;
 }
-#stage > #levelOnePage > #star1 {
+
+#stage>#levelOnePage>#star1 {
   right: 342px;
   display: none;
 }
-#stage > #levelOnePage > #star2 {
+
+#stage>#levelOnePage>#star2 {
   right: 292px;
   display: none;
 }
-#stage > #levelOnePage > #star3 {
+
+#stage>#levelOnePage>#star3 {
   right: 240px;
   display: none;
 }
 
-#stage > #levelOnePage > #clientBox,
-#stage > #levelOnePage > #coinBox {
+#stage>#levelOnePage>#clientBox,
+#stage>#levelOnePage>#coinBox {
   position: absolute;
   top: 45px;
   color: rgb(255, 238, 216);
@@ -720,10 +931,10 @@ body {
   font-size: 20px;
 }
 
-#stage > #levelOnePage > #coinBox {
+#stage>#levelOnePage>#coinBox {
   right: 480px;
 }
 
-#stage > #levelOnePage > #clientBox {
+#stage>#levelOnePage>#clientBox {
   left: 530px;
 }

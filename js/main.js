@@ -272,6 +272,8 @@ man.addEventListener("animationend", function (e) {
   if (e.animationName === "moveMan") {
     sefaresh.style.display = "block";
     man.className = "happyMan";
+  }else if(e.animationName === "manHappy"){
+    man.className = "angryMan";
   }
 });
 
