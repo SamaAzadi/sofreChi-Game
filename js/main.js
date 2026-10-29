@@ -1,8 +1,8 @@
 if (sessionStorage.getItem("restart") === "yes") {
-    menuPage.className = "hide";
-    SelectLevel.className = "hide";
-    levelOnePage.className = "show";
-    sessionStorage.removeItem("restart");
+  menuPage.className = "hide";
+  SelectLevel.className = "hide";
+  levelOnePage.className = "show";
+  sessionStorage.removeItem("restart");
 }
 
 auMain01.play()
@@ -13,85 +13,85 @@ playBtn.onclick = function () {
   auClick.play()
 }
 levelOne.onclick = function () {
-     auClick.play()
-    SelectLevel.className = "hide";
-    levelOnePage.className = "show";
+  auClick.play()
+  SelectLevel.className = "hide";
+  levelOnePage.className = "show";
 
 
 
-    auMain02.play()
-    auMain01.pause()
+  auMain02.play()
+  auMain01.pause()
 
-    fillDoogh();
-    moshtary1();
+  fillDoogh();
+  moshtary1();
 }
 MenuTop.onclick = function () {
-    auClick.play()
+  auClick.play()
   levelOne.className = "hide";
-   MenuSettings.className = "show";
+  MenuSettings.className = "show";
   backMenuSettings.className = "show";
 }
 closeMenuSettings.onclick = function () {
-    auClick.play()
+  auClick.play()
   levelOne.className = "show";
   MenuSettings.className = "hide";
-   backMenuSettings.className = "hide";
+  backMenuSettings.className = "hide";
 }
 
 
 Settings.onclick = function () {
-    auClick.play()
+  auClick.play()
 
-    levelOne.className = "hide";
-    MenuSettings.className = "hide";
+  levelOne.className = "hide";
+  MenuSettings.className = "hide";
 
-    backMenuSettings.className = "show";
-    Settings01.className = "show";
+  backMenuSettings.className = "show";
+  Settings01.className = "show";
 
 
 }
 closeSettings01.onclick = function () {
-    auClick.play()
- levelOne.className = "show";
-    MenuSettings.className = "show";
+  auClick.play()
+  levelOne.className = "show";
+  MenuSettings.className = "show";
 
-    backMenuSettings.className = "show";
-    Settings01.className = "hide";
+  backMenuSettings.className = "show";
+  Settings01.className = "hide";
 
 }
 
 HomePage.onclick = function () {
-    auClick.play()
-     levelOne.className = "hide";
-    MenuSettings.className = "hide";
-    menuPage.className = "show";
+  auClick.play()
+  levelOne.className = "hide";
+  MenuSettings.className = "hide";
+  menuPage.className = "show";
 }
 
-MenuLevelOnePage.onclick =function(){
+MenuLevelOnePage.onclick = function () {
   auClick.play()
   MenuLevelOnePage01.className = "show"
-  edame.className= "show"
+  edame.className = "show"
 }
 Restart.onclick = function () {
-    auClick.play();
-    sessionStorage.setItem("restart", "yes");
-    location.reload();
+  auClick.play();
+  sessionStorage.setItem("restart", "yes");
+  location.reload();
 };
-Continued.onclick = function(){
-   auClick.play()
-   MenuLevelOnePage01.className = "hide"
+Continued.onclick = function () {
+  auClick.play()
+  MenuLevelOnePage01.className = "hide"
 
 }
-HomePage01.onclick = function (){
+HomePage01.onclick = function () {
   auClick.play()
-   MenuLevelOnePage01.className = "hide"
-   menuPage.className = "show"
+  MenuLevelOnePage01.className = "hide"
+  menuPage.className = "show"
 }
 close.onclick = function () {
-    auClick.play();
+  auClick.play();
 
-    MenuLevelOnePage01.className = "hide";
-    levelOnePage.className = "show";
+  MenuLevelOnePage01.className = "hide";
+  levelOnePage.className = "show";
 };
 let diziBardashteShode = false;
 let darhalPodkht = false;
@@ -100,7 +100,7 @@ let timerSokhte;
 
 putDizi.onclick = function () {
   if (!diziBardashteShode && !siniBardashteShode && !darhalPodkht && !dooghIsUp) {
-            auDizi1.play();
+    auDizi1.play();
 
     clearTimeout(timerAmade);
     clearTimeout(timerSokhte);
@@ -110,7 +110,7 @@ putDizi.onclick = function () {
     timerAmade = setTimeout(() => {
       if (darhalPodkht) {
         dizi.className = "amade";
-         auDizi1.pause();
+        auDizi1.pause();
         auDizi2.play();
       }
     }, 8000);
@@ -249,40 +249,96 @@ function move(x) {
   });
 }
 
-
-// function moshtary1(){
-//    setTimeout(() => {
-//       man.className = "manCame";
-//       man.style.display = "block";
-//     }, 8000);
-//     setTimeout(() => {
-//       sefaresh.style.display = "block";
-//       man.className = "happyMan";
-//     }, 16000);
-// }
-
 function moshtary1() {
   setTimeout(() => {
     man.style.display = "block";
     man.className = "manCame";
   }, 8000);
+  setTimeout(() => {
+    woman.style.display = "block";
+    woman.className = "womanCame";
+  }, 14000);
 }
 
 man.addEventListener("animationend", function (e) {
   if (e.animationName === "moveMan") {
     sefaresh.style.display = "block";
     man.className = "happyMan";
-  }else if(e.animationName === "manHappy"){
+  }
+  else if (e.animationName === "manHappy") {
     man.className = "angryMan";
+  } else if (e.animationName === "manAngry") {
+    man.className = "manLeaves";
+    sefaresh.style.display = "none";
   }
 });
 
-man.onclick = function(){
-  if(food.style.display == "block" && man.className != "manCame"){
+woman.addEventListener("animationend", function (e) {
+  if (e.animationName === "moveWoman") {
+    sefaresh1.style.display = "block";
+    woman.className = "happyWoman";
+  }
+  else if (e.animationName === "womanHappy") {
+    woman.className = "angryWoman";
+  }
+  else if (e.animationName === "womanAngry") {
+    woman.className = "womanLeaves";
+    sefaresh1.style.display = "none";
+    // food.style.display = "none";
+  }
+  // else if (e.animationName === "moveOut") {
+  //     man.style.display = "none";
+  // }
+});
+
+man.onclick = function () {
+  if (food.style.display === "block" && man.className !== "manCame") {
     sefaresh.style.display = "none";
+    food.style.display = "none";
+
+    siniBardashteShode = false;
+    noonInSini = false;
+    diziInSini = false;
+    sini.className = "";
+
+    if (man.className === "angryMan") {
+      manCoin.className = "coin1";
+    } else {
+      manCoin.className = "coin2";
+    }
+
+    man.className = "manLeaves";
+    // clientBox.style.innerHTML = -1;
+  }
+};
+
+
+woman.onclick = function () {
+  if (woman.className === "womanCame") return;
+
+  const wantsDizi = getComputedStyle(diziWoman).display === "block";
+  const wantsDoogh = getComputedStyle(dooghWoman).display === "block";
+
+  if (food.style.display === "block" && wantsDizi) {
     food.style.display = "none";
     siniBardashteShode = false;
     noonInSini = false;
     diziInSini = false;
+    sini.className = "";
+    diziWoman.style.display = "none";
+  } else if (doogh.style.display === "block" && wantsDoogh) {
+    doogh.style.display = "none";
+    dooghWoman.style.display = "none";
+    dooghIsUp = false;
+    livan1.style.display = "block";
+    fillDoogh();
+  } else {
+    return;
   }
-}
+
+  if (getComputedStyle(diziWoman).display === "none" &&
+      getComputedStyle(dooghWoman).display === "none") {
+    sefaresh1.style.display = "none";
+    woman.className = "womanLeaves";
+  }
+};

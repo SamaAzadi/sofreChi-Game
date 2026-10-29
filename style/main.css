@@ -271,8 +271,22 @@ body {
   right: 350px;
 }
 
+
+.bgSefaresh {
+  height: 100%;
+  width: 70%;
+  /* border: 1px solid red; */
+  background: url("../images/backSfaresh.png") no-repeat 50%;
+  background-size: 140px;
+  position: absolute;
+  right: 11px;
+  bottom: 5px;
+  display: none;
+  transition: 0.5s;
+}
+
 #stage>#levelOnePage>#man {
-  background: url("../images/man/man1.png") no-repeat 0% 100%;
+  background: url("../images/man/man0.png") no-repeat 0% 100%;
   background-size: 100px;
   /* border: 1px solid red; */
   width: 250px;
@@ -283,19 +297,6 @@ body {
   bottom: 430px;
   display: none;
   --stop-x: 850px;
-}
-
-#stage>#levelOnePage>#man>#sefaresh {
-  height: 100%;
-  width: 70%;
-  /* border: 1px solid red; */
-  background: url("../images/backSfaresh.png") no-repeat 50%;
-  background-size: 140px;
-  position: absolute;
-  right: 10px;
-  bottom: 5px;
-  display: none;
-  transition: 0.5s;
 }
 
 #man.manCame {
@@ -310,7 +311,59 @@ body {
 
 #man.angryMan {
   transform: translateX(var(--stop-x));
-  animation: manAngry 22s steps(1, end) infinite;
+  animation: manAngry 19s steps(1, end) 1;
+}
+
+#man.manLeaves {
+  animation: moveOutMan 10s linear forwards;
+}
+
+@keyframes moveOutMan {
+  0% {
+    transform: translateX(var(--stop-x));
+    background-image: url("../images/man/man0.png");
+  }
+
+  10% {
+    background-image: url("../images/man/man0bala.png");
+  }
+
+  20% {
+    background-image: url("../images/man/man0paeen.png");
+  }
+
+  30% {
+    background-image: url("../images/man/man0bala.png");
+  }
+
+  40% {
+    background-image: url("../images/man/man0.png");
+  }
+
+  50% {
+    background-image: url("../images/man/man0.png");
+  }
+
+  60% {
+    background-image: url("../images/man/man0bala.png");
+  }
+
+  70% {
+    background-image: url("../images/man/man0paeen.png");
+  }
+
+  80% {
+    background-image: url("../images/man/man0bala.png");
+  }
+
+  90% {
+    background-image: url("../images/man/man0.png");
+  }
+
+  100% {
+    transform: translateX(150vw);
+    background-image: url("../images/man/man0paeen.png");
+  }
 }
 
 @keyframes moveMan {
@@ -430,39 +483,73 @@ body {
   45% {
     background-image: url(../images/man/man07.png);
   }
+
   50% {
     background-image: url(../images/man/man08.png);
   }
+
   55% {
     background-image: url(../images/man/man07.png);
   }
+
   60% {
     background-image: url(../images/man/man08.png);
   }
+
   65% {
     background-image: url(../images/man/man07.png);
   }
+
   70% {
     background-image: url(../images/man/man08.png);
   }
+
   75% {
     background-image: url(../images/man/man07.png);
   }
-80% {
+
+  80% {
     background-image: url(../images/man/man08.png);
   }
+
   85% {
     background-image: url(../images/man/man07.png);
   }
+
   90% {
     background-image: url(../images/man/man08.png);
   }
+
   95% {
     background-image: url(../images/man/man07.png);
   }
+
   100% {
     background-image: url(../images/man/man08.png);
   }
+}
+
+#stage>#levelOnePage>.coin1 {
+  width: 25px;
+  height: 30px;
+  border: 1px solid red;
+  background: url("../images/coin01.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  /* left: -50px; */
+  left: 850px;
+  bottom: 420px;
+}
+
+#stage>#levelOnePage>.coin2 {
+  width: 40px;
+  height: 30px;
+  border: 1px solid red;
+  background: url("../images/coin02.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 850px;
+  bottom: 420px;
 }
 
 #stage>#levelOnePage>#man>#sefaresh>#diziMan {
@@ -476,14 +563,14 @@ body {
   bottom: 70px;
 }
 
-#stage>#levelOnePage>#man>#sefaresh>.timers {
+.timers {
   position: absolute;
   bottom: 15px;
   right: 15%;
   height: 85%;
   width: 5%;
   background: rgb(59, 255, 59);
-  border-radius: 10px;
+  /* border-radius: 50%; */
   transform-origin: bottom;
   animation: timer 40s linear forwards, timerColor 40s linear forwards;
 }
@@ -522,6 +609,273 @@ body {
   100% {
     background: red;
   }
+}
+
+#stage>#levelOnePage>#woman {
+  background: url("../images/wife/wife0.png") no-repeat 0% 100%;
+  background-size: 100px;
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: -50px;
+  /* left: 50px; */
+  bottom: 430px;
+  display: none;
+  --stop-x: 650px;
+}
+
+#stage>#levelOnePage>#woman.womanCame {
+  animation: moveWoman 6s linear forwards;
+}
+
+#stage>#levelOnePage>#woman.happyWoman {
+  transform: translateX(var(--stop-x));
+  animation: womanHappy 7s steps(1, end) 3;
+}
+
+#stage>#levelOnePage>#woman.angryWoman {
+  transform: translateX(var(--stop-x));
+  animation: womanAngry 19s steps(1, end) 1;
+}
+
+#stage>#levelOnePage>#woman.womanLeaves {
+  animation: moveOutWoman 13s linear forwards;
+}
+
+@keyframes moveWoman {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--stop-x));
+  }
+
+  0% {
+    background-image: url(../images/wife/wife0.png);
+  }
+
+  10% {
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  20% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  30% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  40% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  50% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  60% {
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  70% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  80% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  90% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  100% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+}
+
+@keyframes womanHappy {
+  0% {
+    background-image: url(../images/wife/wife01.png);
+  }
+
+  25% {
+    background-image: url(../images/wife/wife02.png);
+
+  }
+
+  50% {
+    background-image: url(../images/wife/wife03.png);
+  }
+
+  75% {
+    background-image: url(../images/wife/wife04.png);
+  }
+
+  100% {
+    background-image: url(../images/wife/wife03.png);
+  }
+}
+
+@keyframes womanAngry {
+  0% {
+    background-image: url(../images/wife/wife05.png);
+  }
+
+  5% {
+    background-image: url(../images/wife/wife06.png);
+
+  }
+
+  15% {
+    background-image: url(../images/wife/wife07.png);
+  }
+
+  20% {
+    background-image: url(../images/wife/wife08.png);
+  }
+
+  25% {
+    background-image: url(../images/wife/wife05.png);
+  }
+
+  30% {
+    background-image: url(../images/wife/wife06.png);
+  }
+
+  35% {
+    background-image: url(../images/wife/wife09.png);
+  }
+
+  40% {
+    background-image: url(../images/wife/wife10.png);
+  }
+
+  45% {
+    background-image: url(../images/wife/wife09.png);
+  }
+
+  50% {
+    background-image: url(../images/wife/wife12.png);
+  }
+
+  55% {
+    background-image: url(../images/wife/wife11.png);
+  }
+
+  60% {
+    background-image: url(../images/wife/wife12.png);
+  }
+
+  65% {
+    background-image: url(../images/wife/wife13.png);
+  }
+
+  70% {
+    background-image: url(../images/wife/wife14.png);
+  }
+
+  75% {
+    background-image: url(../images/wife/wife13.png);
+  }
+
+  80% {
+    background-image: url(../images/wife/wife12.png);
+  }
+
+  85% {
+    background-image: url(../images/wife/wife11.png);
+  }
+
+  90% {
+    background-image: url(../images/wife/wife12.png);
+  }
+
+  95% {
+    background-image: url(../images/wife/wife13.png);
+  }
+
+  100% {
+    background-image: url(../images/wife/wife14.png);
+  }
+}
+
+@keyframes moveOutWoman {
+  0% {
+    transform: translateX(var(--stop-x));
+    background-image: url(../images/wife/wife0.png);
+  }
+
+  10% {
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  20% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  30% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  40% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  50% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  60% {
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  70% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  80% {
+    background-image: url(../images/wife/wife0bala.png);
+  }
+
+  90% {
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  100% {
+    transform: translateX(150vw);
+
+    background-image: url(../images/wife/wife0bala.png);
+  }
+}
+
+#stage>#levelOnePage>#woman>#sefaresh1>#diziWoman {
+  width: 70px;
+  height: 60px;
+  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 45px;
+  bottom: 120px;
+  display: block;
+}
+
+#stage>#levelOnePage>#woman>#sefaresh1>#dooghWoman {
+  width: 25px;
+  height: 35px;
+  background: url("../images/dooghFull.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 70px;
+  bottom: 50px;
+  display: block;
 }
 
 #dizi {
