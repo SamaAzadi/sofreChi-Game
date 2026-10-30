@@ -253,11 +253,11 @@ function moshtary1() {
   setTimeout(() => {
     man.style.display = "block";
     man.className = "manCame";
-  }, 8000);
+  }, 5000);
   setTimeout(() => {
     woman.style.display = "block";
     woman.className = "womanCame";
-  }, 14000);
+  }, 10000);
 }
 
 man.addEventListener("animationend", function (e) {

@@ -3,6 +3,11 @@ body {
   padding: 0;
   overflow: hidden;
   background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* video{
@@ -10,16 +15,13 @@ body {
 } */
 
 #stage {
-  width: 100vw;
-  height: 100vh;
+  width: 1530px;
+  height: 750px;
+  flex: none;
   position: relative;
+  margin: auto;
+  overflow: hidden;
 }
-
-/* .page {
-  width: 100%;
-  height: 100%;
-  position: relative;
-} */
 
 .hide {
   display: none;
@@ -30,7 +32,8 @@ body {
 }
 
 #stage>#menuPage {
-  background: url("../images/menu0.png") center / contain no-repeat;
+  background: url("../images/menu0.png") 50% no-repeat;
+  background-size: 100%;
   position: relative;
   width: 100%;
   height: 100%;
@@ -235,8 +238,11 @@ body {
   top: 250px;
   left: 590px;
 } */
+
+/*      levelOne         */
 #stage>#levelOnePage {
-  background: url("../images/bg1.png") center / contain no-repeat;
+  background: url("../images/bg1.png") 50% no-repeat;
+  background-size: 100%;
   position: relative;
   width: 100%;
   height: 100%;
@@ -248,816 +254,17 @@ body {
   height: 270px;
   position: absolute;
   right: 0;
-  bottom: 310px;
+  bottom: 305px;
   z-index: 10;
 }
 
 #zarf {
-  height: 210px;
+  height: 206px;
   width: 300px;
   position: absolute;
   left: 0;
   bottom: 309px;
   z-index: 10;
-}
-
-#stage>#levelOnePage>#putDizi {
-  cursor: pointer;
-  /* background: rgb(34, 255, 0); */
-  width: 120px;
-  height: 70px;
-  position: absolute;
-  bottom: 50px;
-  right: 350px;
-}
-
-
-.bgSefaresh {
-  height: 100%;
-  width: 70%;
-  /* border: 1px solid red; */
-  background: url("../images/backSfaresh.png") no-repeat 50%;
-  background-size: 140px;
-  position: absolute;
-  right: 11px;
-  bottom: 5px;
-  display: none;
-  transition: 0.5s;
-}
-
-#stage>#levelOnePage>#man {
-  background: url("../images/man/man0.png") no-repeat 0% 100%;
-  background-size: 100px;
-  /* border: 1px solid red; */
-  width: 250px;
-  height: 210px;
-  position: absolute;
-  left: -50px;
-  /* left: 50px; */
-  bottom: 430px;
-  display: none;
-  --stop-x: 850px;
-}
-
-#man.manCame {
-  animation: moveMan 8s linear forwards;
-}
-
-#man.happyMan {
-  /* animation: manHappy 8s linear infinite forwards; */
-  transform: translateX(var(--stop-x));
-  animation: manHappy 7s steps(1, end) 3;
-}
-
-#man.angryMan {
-  transform: translateX(var(--stop-x));
-  animation: manAngry 19s steps(1, end) 1;
-}
-
-#man.manLeaves {
-  animation: moveOutMan 10s linear forwards;
-}
-
-@keyframes moveOutMan {
-  0% {
-    transform: translateX(var(--stop-x));
-    background-image: url("../images/man/man0.png");
-  }
-
-  10% {
-    background-image: url("../images/man/man0bala.png");
-  }
-
-  20% {
-    background-image: url("../images/man/man0paeen.png");
-  }
-
-  30% {
-    background-image: url("../images/man/man0bala.png");
-  }
-
-  40% {
-    background-image: url("../images/man/man0.png");
-  }
-
-  50% {
-    background-image: url("../images/man/man0.png");
-  }
-
-  60% {
-    background-image: url("../images/man/man0bala.png");
-  }
-
-  70% {
-    background-image: url("../images/man/man0paeen.png");
-  }
-
-  80% {
-    background-image: url("../images/man/man0bala.png");
-  }
-
-  90% {
-    background-image: url("../images/man/man0.png");
-  }
-
-  100% {
-    transform: translateX(150vw);
-    background-image: url("../images/man/man0paeen.png");
-  }
-}
-
-@keyframes moveMan {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(var(--stop-x));
-  }
-
-  0% {
-    background-image: url(../images/man/man0.png);
-  }
-
-  10% {
-    background-image: url(../images/man/man0bala.png);
-
-  }
-
-  20% {
-    background-image: url(../images/man/man0paeen.png);
-  }
-
-  30% {
-    background-image: url(../images/man/man0bala.png);
-  }
-
-  40% {
-    background-image: url(../images/man/man0.png);
-  }
-
-  50% {
-    background-image: url(../images/man/man0.png);
-  }
-
-  60% {
-    background-image: url(../images/man/man0bala.png);
-
-  }
-
-  70% {
-    background-image: url(../images/man/man0paeen.png);
-  }
-
-  80% {
-    background-image: url(../images/man/man0bala.png);
-  }
-
-  90% {
-    background-image: url(../images/man/man0.png);
-  }
-
-  100% {
-    background-image: url(../images/man/man0paeen.png);
-  }
-}
-
-@keyframes manHappy {
-  0% {
-    background-image: url(../images/man/man01.png);
-  }
-
-  25% {
-    background-image: url(../images/man/man02.png);
-
-  }
-
-  50% {
-    background-image: url(../images/man/man03.png);
-  }
-
-  75% {
-    background-image: url(../images/man/man04.png);
-  }
-
-  100% {
-    background-image: url(../images/man/man03.png);
-  }
-}
-
-@keyframes manAngry {
-  0% {
-    background-image: url(../images/man/man05.png);
-  }
-
-  5% {
-    background-image: url(../images/man/man06.png);
-
-  }
-
-  15% {
-    background-image: url(../images/man/man05.png);
-  }
-
-  20% {
-    background-image: url(../images/man/man06.png);
-  }
-
-  25% {
-    background-image: url(../images/man/man05.png);
-  }
-
-  30% {
-    background-image: url(../images/man/man06.png);
-
-  }
-
-  35% {
-    background-image: url(../images/man/man05.png);
-  }
-
-  40% {
-    background-image: url(../images/man/man06.png);
-  }
-
-  45% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  50% {
-    background-image: url(../images/man/man08.png);
-  }
-
-  55% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  60% {
-    background-image: url(../images/man/man08.png);
-  }
-
-  65% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  70% {
-    background-image: url(../images/man/man08.png);
-  }
-
-  75% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  80% {
-    background-image: url(../images/man/man08.png);
-  }
-
-  85% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  90% {
-    background-image: url(../images/man/man08.png);
-  }
-
-  95% {
-    background-image: url(../images/man/man07.png);
-  }
-
-  100% {
-    background-image: url(../images/man/man08.png);
-  }
-}
-
-#stage>#levelOnePage>.coin1 {
-  width: 25px;
-  height: 30px;
-  border: 1px solid red;
-  background: url("../images/coin01.png") 50% no-repeat;
-  background-size: cover;
-  position: absolute;
-  /* left: -50px; */
-  left: 850px;
-  bottom: 420px;
-}
-
-#stage>#levelOnePage>.coin2 {
-  width: 40px;
-  height: 30px;
-  border: 1px solid red;
-  background: url("../images/coin02.png") 50% no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 850px;
-  bottom: 420px;
-}
-
-#stage>#levelOnePage>#man>#sefaresh>#diziMan {
-  /* border: 1px solid red; */
-  width: 70px;
-  height: 60px;
-  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
-  background-size: contain;
-  position: absolute;
-  right: 42px;
-  bottom: 70px;
-}
-
-.timers {
-  position: absolute;
-  bottom: 15px;
-  right: 15%;
-  height: 85%;
-  width: 5%;
-  background: rgb(59, 255, 59);
-  /* border-radius: 50%; */
-  transform-origin: bottom;
-  animation: timer 40s linear forwards, timerColor 40s linear forwards;
-}
-
-@keyframes timer {
-  from {
-    transform: scaleY(1);
-  }
-
-  to {
-    transform: scaleY(0);
-  }
-}
-
-@keyframes timerColor {
-  0% {
-    background: rgb(59, 255, 59);
-  }
-
-  50% {
-    background: rgb(59, 255, 59);
-  }
-
-  50.1% {
-    background: yellow;
-  }
-
-  70% {
-    background: yellow;
-  }
-
-  70.1% {
-    background: red;
-  }
-
-  100% {
-    background: red;
-  }
-}
-
-#stage>#levelOnePage>#woman {
-  background: url("../images/wife/wife0.png") no-repeat 0% 100%;
-  background-size: 100px;
-  /* border: 1px solid red; */
-  width: 250px;
-  height: 210px;
-  position: absolute;
-  left: -50px;
-  /* left: 50px; */
-  bottom: 430px;
-  display: none;
-  --stop-x: 650px;
-}
-
-#stage>#levelOnePage>#woman.womanCame {
-  animation: moveWoman 6s linear forwards;
-}
-
-#stage>#levelOnePage>#woman.happyWoman {
-  transform: translateX(var(--stop-x));
-  animation: womanHappy 7s steps(1, end) 3;
-}
-
-#stage>#levelOnePage>#woman.angryWoman {
-  transform: translateX(var(--stop-x));
-  animation: womanAngry 19s steps(1, end) 1;
-}
-
-#stage>#levelOnePage>#woman.womanLeaves {
-  animation: moveOutWoman 13s linear forwards;
-}
-
-@keyframes moveWoman {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(var(--stop-x));
-  }
-
-  0% {
-    background-image: url(../images/wife/wife0.png);
-  }
-
-  10% {
-    background-image: url(../images/wife/wife0bala.png);
-
-  }
-
-  20% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  30% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  40% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  50% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  60% {
-    background-image: url(../images/wife/wife0bala.png);
-
-  }
-
-  70% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  80% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  90% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  100% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-}
-
-@keyframes womanHappy {
-  0% {
-    background-image: url(../images/wife/wife01.png);
-  }
-
-  25% {
-    background-image: url(../images/wife/wife02.png);
-
-  }
-
-  50% {
-    background-image: url(../images/wife/wife03.png);
-  }
-
-  75% {
-    background-image: url(../images/wife/wife04.png);
-  }
-
-  100% {
-    background-image: url(../images/wife/wife03.png);
-  }
-}
-
-@keyframes womanAngry {
-  0% {
-    background-image: url(../images/wife/wife05.png);
-  }
-
-  5% {
-    background-image: url(../images/wife/wife06.png);
-
-  }
-
-  15% {
-    background-image: url(../images/wife/wife07.png);
-  }
-
-  20% {
-    background-image: url(../images/wife/wife08.png);
-  }
-
-  25% {
-    background-image: url(../images/wife/wife05.png);
-  }
-
-  30% {
-    background-image: url(../images/wife/wife06.png);
-  }
-
-  35% {
-    background-image: url(../images/wife/wife09.png);
-  }
-
-  40% {
-    background-image: url(../images/wife/wife10.png);
-  }
-
-  45% {
-    background-image: url(../images/wife/wife09.png);
-  }
-
-  50% {
-    background-image: url(../images/wife/wife12.png);
-  }
-
-  55% {
-    background-image: url(../images/wife/wife11.png);
-  }
-
-  60% {
-    background-image: url(../images/wife/wife12.png);
-  }
-
-  65% {
-    background-image: url(../images/wife/wife13.png);
-  }
-
-  70% {
-    background-image: url(../images/wife/wife14.png);
-  }
-
-  75% {
-    background-image: url(../images/wife/wife13.png);
-  }
-
-  80% {
-    background-image: url(../images/wife/wife12.png);
-  }
-
-  85% {
-    background-image: url(../images/wife/wife11.png);
-  }
-
-  90% {
-    background-image: url(../images/wife/wife12.png);
-  }
-
-  95% {
-    background-image: url(../images/wife/wife13.png);
-  }
-
-  100% {
-    background-image: url(../images/wife/wife14.png);
-  }
-}
-
-@keyframes moveOutWoman {
-  0% {
-    transform: translateX(var(--stop-x));
-    background-image: url(../images/wife/wife0.png);
-  }
-
-  10% {
-    background-image: url(../images/wife/wife0bala.png);
-
-  }
-
-  20% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  30% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  40% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  50% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  60% {
-    background-image: url(../images/wife/wife0bala.png);
-
-  }
-
-  70% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  80% {
-    background-image: url(../images/wife/wife0bala.png);
-  }
-
-  90% {
-    background-image: url(../images/wife/wife0paeen.png);
-  }
-
-  100% {
-    transform: translateX(150vw);
-
-    background-image: url(../images/wife/wife0bala.png);
-  }
-}
-
-#stage>#levelOnePage>#woman>#sefaresh1>#diziWoman {
-  width: 70px;
-  height: 60px;
-  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
-  background-size: contain;
-  position: absolute;
-  right: 45px;
-  bottom: 120px;
-  display: block;
-}
-
-#stage>#levelOnePage>#woman>#sefaresh1>#dooghWoman {
-  width: 25px;
-  height: 35px;
-  background: url("../images/dooghFull.png") no-repeat 50%;
-  background-size: contain;
-  position: absolute;
-  right: 70px;
-  bottom: 50px;
-  display: block;
-}
-
-#dizi {
-  display: none;
-  background: url("../images/Daisy/Dizi01.png") no-repeat 50% 100%;
-  background-size: 50px;
-  position: absolute;
-  bottom: 165px;
-  right: 415px;
-  width: 50px;
-  height: 90px;
-  cursor: pointer;
-}
-
-#dizi.pokht {
-  animation: pokhtDizi 8s steps(1, end) forwards;
-}
-
-#dizi.amade {
-  animation: diziAmade 10s steps(1, end) forwards;
-}
-
-#dizi.sokhte {
-  animation: diziSokhte 5s steps(1, end) infinite;
-}
-
-#dizi1,
-#dizi2 {
-  position: fixed;
-  width: 50px;
-  pointer-events: none;
-  display: none;
-  z-index: 20;
-}
-
-#dizi3,
-#noon1,
-#food {
-  position: fixed;
-  width: 120px;
-  pointer-events: none;
-  display: none;
-  z-index: 20;
-}
-
-#stage>#levelOnePage>#sini {
-  cursor: pointer;
-  width: 123px;
-  height: 100px;
-  position: absolute;
-  bottom: 180px;
-  left: 707px;
-}
-
-#stage>#levelOnePage>#sini.khali {
-  background: url("../images/zirsini.png") no-repeat 50% 100%;
-  background-size: 125px;
-}
-
-#stage>#levelOnePage>#sini.noonOn {
-  background: url("../images/noon.png") no-repeat 50% 100%;
-  background-size: 125px;
-}
-
-#stage>#levelOnePage>#sini.diziOn {
-  background: url("../images/diziIn.png") no-repeat 50% 100%;
-  background-size: 125px;
-}
-
-#stage>#levelOnePage>#sini.full {
-  background: url("../images/food.png") no-repeat 50% 100%;
-  background-size: 125px;
-}
-
-#stage>#levelOnePage>#noon {
-  cursor: pointer;
-  /* background: rgb(34, 255, 0); */
-  width: 100px;
-  height: 70px;
-  position: absolute;
-  bottom: 90px;
-  right: 720px;
-}
-
-#stage>#levelOnePage>#parch {
-  background: url("") 50% no-repeat;
-  background-size: 100px;
-  width: 150px;
-  height: 130px;
-  position: absolute;
-  bottom: 230px;
-  left: 300px;
-}
-
-#stage>#levelOnePage>#parch>#parch1 {
-  width: 70px;
-  position: absolute;
-  bottom: 0px;
-  left: 10px;
-}
-
-#stage>#levelOnePage>#parch>#parch1.Up {
-  animation: parchUp 2s ease-in-out forwards;
-}
-
-#stage>#levelOnePage>#parch.fill {
-  animation: parchUp2 3s ease-in-out 2;
-}
-
-@keyframes parchUp {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(22px, -40px) rotate(10deg);
-  }
-
-  100% {
-    transform: translate(22px, -40px) rotate(60deg);
-  }
-}
-
-@keyframes parchUp2 {
-  0% {
-    background-image: url(../images/Pitcher/Pitcher06.png);
-  }
-
-  15% {
-    background-image: url(../images/Pitcher/Pitcher7.png);
-  }
-
-  30% {
-    background-image: url(../images/Pitcher/Pitcher8.png);
-  }
-
-  45% {
-    background-image: url(../images/Pitcher/Pitcher9.png);
-  }
-
-  50% {
-    background-image: url(../images/Pitcher/Pitcher8.png);
-  }
-
-  65% {
-    background-image: url(../images/Pitcher/Pitcher7.png);
-  }
-
-  80% {
-    background-image: url(../images/Pitcher/Pitcher06.png);
-  }
-
-  95% {
-    background-image: url(../images/Pitcher/Pitcher7.png);
-  }
-
-  100% {
-    background-image: url(../images/Pitcher/Pitcher8.png);
-  }
-}
-
-#stage>#levelOnePage>#parch>#livan2 {
-  display: none;
-}
-
-#doogh {
-  width: 30px;
-  height: 42px;
-  position: fixed;
-  pointer-events: none;
-  display: none;
-  z-index: 20;
-}
-
-#stage>#levelOnePage>#parch>#livan1,
-#stage>#levelOnePage>#parch>#livan2 {
-  /* display: none; */
-  width: 30px;
-  height: 42px;
-  position: absolute;
-  bottom: 0px;
-  right: 25px;
 }
 
 #stage>#levelOnePage>#zobale:hover {
@@ -1072,184 +279,6 @@ body {
   position: absolute;
   bottom: 30px;
   left: 254px;
-}
-
-@keyframes pokhtDizi {
-  0% {
-    background-image: url(../images/Daisy/Dizi01.png);
-  }
-
-  5% {
-    background-image: url(../images/Daisy/Dizi02.png);
-  }
-
-  10% {
-    background-image: url(../images/Daisy/Dizi03.png);
-  }
-
-  15% {
-    background-image: url(../images/Daisy/Dizi04.png);
-  }
-
-  20% {
-    background-image: url(../images/Daisy/Dizi05.png);
-  }
-
-  25% {
-    background-image: url(../images/Daisy/Dizi06.png);
-  }
-
-  30% {
-    background-image: url(../images/Daisy/Dizi05.png);
-  }
-
-  35% {
-    background-image: url(../images/Daisy/Dizi04.png);
-  }
-
-  40% {
-    background-image: url(../images/Daisy/Dizi03.png);
-  }
-
-  45% {
-    background-image: url(../images/Daisy/Dizi02.png);
-  }
-
-  50% {
-    background-image: url(../images/Daisy/Dizi01.png);
-  }
-
-  55% {
-    background-image: url(../images/Daisy/Dizi02.png);
-  }
-
-  60% {
-    background-image: url(../images/Daisy/Dizi03.png);
-  }
-
-  65% {
-    background-image: url(../images/Daisy/Dizi04.png);
-  }
-
-  70% {
-    background-image: url(../images/Daisy/Dizi04.png);
-  }
-
-  75% {
-    background-image: url(../images/Daisy/Dizi05.png);
-  }
-
-  80% {
-    background-image: url(../images/Daisy/Dizi06.png);
-  }
-
-  85% {
-    background-image: url(../images/Daisy/Dizi05.png);
-  }
-
-  90% {
-    background-image: url(../images/Daisy/Dizi04.png);
-  }
-
-  95% {
-    background-image: url(../images/Daisy/Dizi03.png);
-  }
-
-  100% {
-    background-image: url(../images/Daisy/Dizi02.png);
-  }
-}
-
-@keyframes diziAmade {
-  0% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-
-  10% {
-    background-image: url(../images/Daisy/Dizi11.png);
-  }
-
-  20% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-
-  30% {
-    background-image: url(../images/Daisy/Dizi11.png);
-  }
-
-  40% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-
-  50% {
-    background-image: url(../images/Daisy/Dizi11.png);
-  }
-
-  60% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-
-  70% {
-    background-image: url(../images/Daisy/Dizi11.png);
-  }
-
-  80% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-
-  90% {
-    background-image: url(../images/Daisy/Dizi11.png);
-  }
-
-  100% {
-    background-image: url(../images/Daisy/Dizi07.png);
-  }
-}
-
-@keyframes diziSokhte {
-  0% {
-    background-image: url(../images/Daisy/Daisyfuel02.png);
-  }
-
-  10% {
-    background-image: url(../images/Daisy/Daisyfuel03.png);
-  }
-
-  20% {
-    background-image: url(../images/Daisy/Daisyfuel04.png);
-  }
-
-  30% {
-    background-image: url(../images/Daisy/Daisyfuel05.png);
-  }
-
-  40% {
-    background-image: url(../images/Daisy/Daisyfuel04.png);
-  }
-
-  50% {
-    background-image: url(../images/Daisy/Daisyfuel03.png);
-  }
-
-  60% {
-    background-image: url(../images/Daisy/Daisyfuel02.png);
-  }
-
-  70% {
-    background-image: url(../images/Daisy/Daisyfuel02.png);
-  }
-
-  80% {
-    background-image: url(../images/Daisy/Daisyfuel03.png);
-  }
-
-  90% {
-    background-image: url(../images/Daisy/Daisyfuel04.png);
-  }
-
-  100% {
-    background-image: url(../images/Daisy/Daisyfuel05.png);
-  }
 }
 
 #stage>#levelOnePage>.star {
@@ -1291,4 +320,701 @@ body {
 
 #stage>#levelOnePage>#clientBox {
   left: 530px;
+}
+
+/*          dizi             */
+
+#stage>#levelOnePage>#putDizi {
+  cursor: pointer;
+  /* background: rgb(34, 255, 0); */
+  width: 120px;
+  height: 70px;
+  position: absolute;
+  bottom: 50px;
+  right: 350px;
+}
+
+#dizi {
+  display: none;
+  background: url("../images/Daisy/Dizi01.png") no-repeat 50% 100%;
+  background-size: 50px;
+  position: absolute;
+  bottom: 165px;
+  right: 415px;
+  width: 50px;
+  height: 90px;
+  cursor: pointer;
+}
+
+#dizi.pokht {
+  animation: pokhtDizi 8s steps(1, end) forwards;
+}
+
+#dizi.amade {
+  animation: diziAmade 10s steps(1, end) forwards;
+}
+
+#dizi.sokhte {
+  animation: diziSokhte 5s steps(1, end) infinite;
+}
+
+@keyframes pokhtDizi {
+  0%,
+  50% {
+    background-image: url(../images/Daisy/Dizi01.png);
+  }
+
+  5%,
+  45%,
+  55%,
+  100% {
+    background-image: url(../images/Daisy/Dizi02.png);
+  }
+
+  10%,
+  40%,
+  60%,
+  95%{
+    background-image: url(../images/Daisy/Dizi03.png);
+  }
+
+  15%,
+  35%,
+  65%,
+  70%,
+  90% {
+    background-image: url(../images/Daisy/Dizi04.png);
+  }
+
+  20%,
+  30%,
+  75%,
+  85% {
+    background-image: url(../images/Daisy/Dizi05.png);
+  }
+
+  25%,
+  80% {
+    background-image: url(../images/Daisy/Dizi06.png);
+  }
+}
+
+@keyframes diziAmade {
+  
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    background-image: url(../images/Daisy/Dizi07.png);
+  }
+ 
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    background-image: url(../images/Daisy/Dizi11.png);
+  }
+}
+
+@keyframes diziSokhte {
+  0%,
+  60%,
+  70% {
+    background-image: url(../images/Daisy/Daisyfuel02.png);
+  }
+ 
+  10%,
+  50%,
+  80% {
+    background-image: url(../images/Daisy/Daisyfuel03.png);
+  }
+ 
+  20%,
+  40%,
+  90% {
+    background-image: url(../images/Daisy/Daisyfuel04.png);
+  }
+ 
+  30%,
+  100% {
+    background-image: url(../images/Daisy/Daisyfuel05.png);
+  }
+}
+/*          paech           */
+#stage>#levelOnePage>#parch {
+  background: url("") 50% no-repeat;
+  background-size: 100px;
+  width: 150px;
+  height: 130px;
+  position: absolute;
+  bottom: 230px;
+  left: 300px;
+}
+
+#stage>#levelOnePage>#parch>#parch1 {
+  width: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+
+#stage>#levelOnePage>#parch>#parch1.Up {
+  animation: parchUp 2s ease-in-out forwards;
+}
+
+#stage>#levelOnePage>#parch.fill {
+  animation: parchUp2 3s ease-in-out 2;
+}
+
+@keyframes parchUp {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(22px, -40px) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(22px, -40px) rotate(60deg);
+  }
+}
+
+@keyframes parchUp2 {
+  0%,
+  80% {
+    background-image: url(../images/Pitcher/Pitcher06.png);
+  }
+ 
+  15%,
+  65%,
+  95% {
+    background-image: url(../images/Pitcher/Pitcher7.png);
+  }
+ 
+  30%,
+  50%,
+  100% {
+    background-image: url(../images/Pitcher/Pitcher8.png);
+  }
+ 
+  45% {
+    background-image: url(../images/Pitcher/Pitcher9.png);
+  }
+}
+
+#stage>#levelOnePage>#parch>#livan2 {
+  display: none;
+}
+
+#stage>#levelOnePage>#parch>#livan1,
+#stage>#levelOnePage>#parch>#livan2 {
+  /* display: none; */
+  width: 30px;
+  height: 42px;
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+}
+/*          sini             */
+#stage>#levelOnePage>#sini {
+  cursor: pointer;
+  width: 123px;
+  height: 100px;
+  position: absolute;
+  bottom: 180px;
+  left: 707px;
+}
+
+#stage>#levelOnePage>#sini.khali {
+  background: url("../images/zirsini.png") no-repeat 50% 100%;
+  background-size: 125px;
+}
+
+#stage>#levelOnePage>#sini.noonOn {
+  background: url("../images/noon.png") no-repeat 50% 100%;
+  background-size: 125px;
+}
+
+#stage>#levelOnePage>#sini.diziOn {
+  background: url("../images/diziIn.png") no-repeat 50% 100%;
+  background-size: 125px;
+}
+
+#stage>#levelOnePage>#sini.full {
+  background: url("../images/food.png") no-repeat 50% 100%;
+  background-size: 125px;
+}
+
+#stage>#levelOnePage>#noon {
+  cursor: pointer;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 90px;
+  right: 720px;
+}
+/*          mouse           */
+
+#dizi1,
+#dizi2 {
+  position: fixed;
+  width: 50px;
+  pointer-events: none;
+  display: none;
+  z-index: 20;
+}
+
+#dizi3,
+#noon1,
+#food {
+  position: fixed;
+  width: 120px;
+  pointer-events: none;
+  display: none;
+  z-index: 20;
+}
+
+#doogh {
+  width: 30px;
+  height: 42px;
+  position: fixed;
+  pointer-events: none;
+  display: none;
+  z-index: 20;
+}
+
+/*          client          */
+
+.bgSefaresh {
+  height: 100%;
+  width: 70%;
+  /* border: 1px solid red; */
+  background: url("../images/backSfaresh.png") no-repeat 50%;
+  background-size: 140px;
+  position: absolute;
+  right: 11px;
+  bottom: 5px;
+  display: none;
+  transition: 0.5s;
+}
+
+
+
+#stage>#levelOnePage>.coin1 {
+  width: 25px;
+  height: 30px;
+  border: 1px solid red;
+  background: url("../images/coin01.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  /* left: -50px; */
+  left: 850px;
+  bottom: 420px;
+}
+
+#stage>#levelOnePage>.coin2 {
+  width: 40px;
+  height: 30px;
+  border: 1px solid red;
+  background: url("../images/coin02.png") 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 850px;
+  bottom: 420px;
+}
+
+.timers {
+  position: absolute;
+  bottom: 15px;
+  right: 15%;
+  height: 85%;
+  width: 5%;
+  background: rgb(59, 255, 59);
+  /* border-radius: 50%; */
+  transform-origin: bottom;
+  animation: timer 30s linear forwards, timerColor 30s linear forwards;
+}
+
+@keyframes timer {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes timerColor {
+  0%,
+  50% {
+    background: rgb(59, 255, 59);
+  }
+
+  50.1%,
+  70% {
+    background: yellow;
+  }
+
+  70.1%,
+  100% {
+    background: red;
+  }
+}
+
+/*          man            */
+#stage>#levelOnePage>#man {
+  background: url("../images/man/man0.png") no-repeat 0% 100%;
+  background-size: 100px;
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: -50px;
+  /* left: 50px; */
+  bottom: 430px;
+  display: none;
+  --stop-x: 940px;
+  z-index: 5;
+}
+
+#stage>#levelOnePage>#man>#sefaresh>#diziMan {
+  /* border: 1px solid red; */
+  width: 70px;
+  height: 60px;
+  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 42px;
+  bottom: 70px;
+}
+
+#man.manCame {
+  animation: moveMan 8s linear forwards;
+}
+
+#man.happyMan {
+  /* animation: manHappy 8s linear infinite forwards; */
+  transform: translateX(var(--stop-x));
+  animation: manHappy 5s steps(1, end) 3;
+}
+
+#man.angryMan {
+  transform: translateX(var(--stop-x));
+  animation: manAngry 15s steps(1, end) 1;
+}
+
+#man.manLeaves {
+  animation: moveOutMan 10s linear forwards;
+}
+
+@keyframes moveOutMan {
+  0% {
+    transform: translateX(var(--stop-x));
+    background-image: url("../images/man/man0.png");
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    background-image: url(../images/man/man0bala.png);
+
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    background-image: url(../images/man/man0paeen.png);
+  }
+  
+  100% {
+    transform: translateX(150vw);
+    background-image: url("../images/man/man0paeen.png");
+  }
+}
+
+@keyframes moveMan {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--stop-x));
+  }
+
+  0%{
+    background-image: url(../images/man/man0.png);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    background-image: url(../images/man/man0bala.png);
+
+  }
+
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    background-image: url(../images/man/man0paeen.png);
+  }
+}
+
+@keyframes manHappy {
+  0% {
+    background-image: url(../images/man/man01.png);
+  }
+
+  25% {
+    background-image: url(../images/man/man02.png);
+
+  }
+
+  50%,
+  100% {
+    background-image: url(../images/man/man03.png);
+  }
+
+  75% {
+    background-image: url(../images/man/man04.png);
+  }
+}
+
+@keyframes manAngry {
+
+  0%,
+  15%,
+  25%,
+  35% {
+    background-image: url(../images/man/man05.png);
+  }
+
+  5%,
+  20%,
+  30%,
+  40% {
+    background-image: url(../images/man/man06.png);
+  }
+
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    background-image: url(../images/man/man07.png);
+  }
+
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    background-image: url(../images/man/man08.png);
+  }
+}
+
+/*     woman      */
+
+#stage>#levelOnePage>#woman {
+  background: url("../images/wife/wife0.png") no-repeat 0% 100%;
+  background-size: 100px;
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: -50px;
+  /* left: 50px; */
+  bottom: 430px;
+  display: none;
+  --stop-x: 680px;
+  z-index: 4;
+}
+
+#stage>#levelOnePage>#woman.womanCame {
+  animation: moveWoman 6s linear forwards;
+}
+
+#stage>#levelOnePage>#woman.happyWoman {
+  transform: translateX(var(--stop-x));
+  animation: womanHappy 5s steps(1, end) 3;
+}
+
+#stage>#levelOnePage>#woman.angryWoman {
+  transform: translateX(var(--stop-x));
+  animation: womanAngry 15s steps(1, end) 1;
+}
+
+#stage>#levelOnePage>#woman.womanLeaves {
+  animation: moveOutWoman 13s linear forwards;
+}
+
+@keyframes moveWoman {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--stop-x));
+  }
+
+  0% {
+    background-image: url(../images/wife/wife0.png);
+  }
+
+  10%,
+  30%,
+  40%,
+  60%,
+  80%,
+  100% {
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  20%,
+  50%,
+  70%,
+  90%{
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+}
+
+@keyframes womanHappy {
+  0% {
+    background-image: url(../images/wife/wife01.png);
+  }
+
+  25% {
+    background-image: url(../images/wife/wife02.png);
+
+  }
+
+  50%,
+  100% {
+    background-image: url(../images/wife/wife03.png);
+  }
+
+  75% {
+    background-image: url(../images/wife/wife04.png);
+  }
+}
+
+@keyframes womanAngry {
+  0% {
+    background-image: url(../images/wife/wife05.png);
+  }
+
+  5%,
+  30% {
+    background-image: url(../images/wife/wife06.png);
+
+  }
+
+  15% {
+    background-image: url(../images/wife/wife07.png);
+  }
+
+  20% {
+    background-image: url(../images/wife/wife08.png);
+  }
+
+  25% {
+    background-image: url(../images/wife/wife05.png);
+  }
+
+  35%,
+  45% {
+    background-image: url(../images/wife/wife09.png);
+  }
+
+  40% {
+    background-image: url(../images/wife/wife10.png);
+  }
+
+  50%,
+  60%,
+  80%,
+  90%{
+    background-image: url(../images/wife/wife12.png);
+  }
+
+  55%,
+  85% {
+    background-image: url(../images/wife/wife11.png);
+  }
+
+  65%,
+  75%,
+  95%{
+    background-image: url(../images/wife/wife13.png);
+  }
+
+  70%,
+  100% {
+    background-image: url(../images/wife/wife14.png);
+  }
+}
+
+@keyframes moveOutWoman {
+  0% {
+    transform: translateX(var(--stop-x));
+    background-image: url(../images/wife/wife0.png);
+  }
+
+  10%,
+  30%,
+  40%,
+  60%,
+  80%{
+    background-image: url(../images/wife/wife0bala.png);
+
+  }
+
+  20%,
+  50%,
+  70%,
+  90%{
+    background-image: url(../images/wife/wife0paeen.png);
+  }
+
+  100% {
+    transform: translateX(150vw);
+
+    background-image: url(../images/wife/wife0bala.png);
+  }
+}
+
+#stage>#levelOnePage>#woman>#sefaresh1>#diziWoman {
+  width: 70px;
+  height: 60px;
+  background: url("../images/Daisy/fullFood.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 45px;
+  bottom: 120px;
+  display: block;
+}
+
+#stage>#levelOnePage>#woman>#sefaresh1>#dooghWoman {
+  width: 25px;
+  height: 35px;
+  background: url("../images/dooghFull.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 70px;
+  bottom: 50px;
+  display: block;
 }
