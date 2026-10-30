@@ -264,6 +264,13 @@ function moshtary1() {
   }, 18000);
 }
 
+function moshtary2() {
+  setTimeout(() => {
+    oldMan.style.display = "block";
+    oldMan.className = "oldManCame";
+  }, 3000);
+}
+
 man.addEventListener("animationend", function (e) {
   if (e.animationName === "moveMan") {
     sefaresh.style.display = "block";
@@ -274,6 +281,7 @@ man.addEventListener("animationend", function (e) {
   } else if (e.animationName === "manAngry") {
     man.className = "manLeaves";
     sefaresh.style.display = "none";
+    moshtary2();
   }
 });
 
@@ -305,6 +313,19 @@ oldWoman.addEventListener("animationend", function (e) {
   }
 });
 
+oldMan.addEventListener("animationend", function (e) {
+  if (e.animationName === "moveOldMan") {
+    sefaresh3.style.display = "block";
+    oldMan.className = "happyOldMan";
+  }
+  else if (e.animationName === "oldManHappy") {
+    oldMan.className = "angryOldMan";
+  }
+  else if (e.animationName === "oldManAngry") {
+    oldMan.className = "oldManLeaves";
+    sefaresh3.style.display = "none";
+  }
+});
 
 man.onclick = function () {
   if (food.style.display === "block" && man.className !== "manCame") {
@@ -315,15 +336,8 @@ man.onclick = function () {
     noonInSini = false;
     diziInSini = false;
     sini.className = "";
-
-    if (man.className === "angryMan") {
-      manCoin.className = "coin1";
-    } else {
-      manCoin.className = "coin2";
-    }
-
     man.className = "manLeaves";
-    // clientBox.style.innerHTML = -1;
+    moshtary2();
   }
 };
 
@@ -371,6 +385,23 @@ oldWoman.onclick = function () {
     fillDoogh();
     sefaresh2.style.display = "none";
     oldWoman.className = "oldWomanLeaves";
+  } else {
+    return;
+  }
+};
+
+oldMan.onclick = function () {
+  if (oldMan.className === "oldManCame") return;
+  const wantsDizi = getComputedStyle(diziOldMan).display === "block";
+  if (food.style.display === "block" && wantsDizi) {
+    sefaresh3.style.display = "none";
+    food.style.display = "none";
+    siniBardashteShode = false;
+    noonInSini = false;
+    diziInSini = false;
+    sini.className = "";
+    diziOldMan.style.display = "none";
+    oldMan.className = "oldManLeaves";
   } else {
     return;
   }
