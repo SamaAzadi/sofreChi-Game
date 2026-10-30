@@ -257,7 +257,11 @@ function moshtary1() {
   setTimeout(() => {
     woman.style.display = "block";
     woman.className = "womanCame";
-  }, 10000);
+  }, 12000);
+  setTimeout(() => {
+    oldWoman.style.display = "block";
+    oldWoman.className = "oldWomanCame";
+  }, 18000);
 }
 
 man.addEventListener("animationend", function (e) {
@@ -284,12 +288,23 @@ woman.addEventListener("animationend", function (e) {
   else if (e.animationName === "womanAngry") {
     woman.className = "womanLeaves";
     sefaresh1.style.display = "none";
-    // food.style.display = "none";
   }
-  // else if (e.animationName === "moveOut") {
-  //     man.style.display = "none";
-  // }
 });
+
+oldWoman.addEventListener("animationend", function (e) {
+  if (e.animationName === "moveOldWoman") {
+    sefaresh2.style.display = "block";
+    oldWoman.className = "happyOldWoman";
+  }
+  else if (e.animationName === "oldWomanHappy") {
+    oldWoman.className = "angryOldWoman";
+  }
+  else if (e.animationName === "oldWomanAngry") {
+    oldWoman.className = "oldWomanLeaves";
+    sefaresh2.style.display = "none";
+  }
+});
+
 
 man.onclick = function () {
   if (food.style.display === "block" && man.className !== "manCame") {
@@ -340,5 +355,23 @@ woman.onclick = function () {
       getComputedStyle(dooghWoman).display === "none") {
     sefaresh1.style.display = "none";
     woman.className = "womanLeaves";
+  }
+};
+
+oldWoman.onclick = function () {
+  if (woman.className === "oldWomanCame") return;
+
+  const wantsDoogh = getComputedStyle(dooghOldWoman).display === "block";
+
+  if (doogh.style.display === "block" && wantsDoogh) {
+    doogh.style.display = "none";
+    dooghOldWoman.style.display = "none";
+    dooghIsUp = false;
+    livan1.style.display = "block";
+    fillDoogh();
+    sefaresh2.style.display = "none";
+    oldWoman.className = "oldWomanLeaves";
+  } else {
+    return;
   }
 };

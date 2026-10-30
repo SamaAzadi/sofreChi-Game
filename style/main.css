@@ -359,6 +359,7 @@ body {
 }
 
 @keyframes pokhtDizi {
+
   0%,
   50% {
     background-image: url(../images/Daisy/Dizi01.png);
@@ -374,7 +375,7 @@ body {
   10%,
   40%,
   60%,
-  95%{
+  95% {
     background-image: url(../images/Daisy/Dizi03.png);
   }
 
@@ -400,7 +401,7 @@ body {
 }
 
 @keyframes diziAmade {
-  
+
   0%,
   20%,
   40%,
@@ -409,7 +410,7 @@ body {
   100% {
     background-image: url(../images/Daisy/Dizi07.png);
   }
- 
+
   10%,
   30%,
   50%,
@@ -420,29 +421,31 @@ body {
 }
 
 @keyframes diziSokhte {
+
   0%,
   60%,
   70% {
     background-image: url(../images/Daisy/Daisyfuel02.png);
   }
- 
+
   10%,
   50%,
   80% {
     background-image: url(../images/Daisy/Daisyfuel03.png);
   }
- 
+
   20%,
   40%,
   90% {
     background-image: url(../images/Daisy/Daisyfuel04.png);
   }
- 
+
   30%,
   100% {
     background-image: url(../images/Daisy/Daisyfuel05.png);
   }
 }
+
 /*          paech           */
 #stage>#levelOnePage>#parch {
   background: url("") 50% no-repeat;
@@ -484,23 +487,24 @@ body {
 }
 
 @keyframes parchUp2 {
+
   0%,
   80% {
     background-image: url(../images/Pitcher/Pitcher06.png);
   }
- 
+
   15%,
   65%,
   95% {
     background-image: url(../images/Pitcher/Pitcher7.png);
   }
- 
+
   30%,
   50%,
   100% {
     background-image: url(../images/Pitcher/Pitcher8.png);
   }
- 
+
   45% {
     background-image: url(../images/Pitcher/Pitcher9.png);
   }
@@ -519,6 +523,7 @@ body {
   bottom: 0px;
   right: 25px;
 }
+
 /*          sini             */
 #stage>#levelOnePage>#sini {
   cursor: pointer;
@@ -557,6 +562,7 @@ body {
   bottom: 90px;
   right: 720px;
 }
+
 /*          mouse           */
 
 #dizi1,
@@ -588,6 +594,17 @@ body {
 }
 
 /*          client          */
+#stage>#levelOnePage>#man,
+#stage>#levelOnePage>#woman,
+#stage>#levelOnePage>#oldWoman {
+  background-size: 100px;
+  width: 250px;
+  height: 210px;
+  position: absolute;
+  left: -50px;
+  bottom: 430px;
+  display: none;
+}
 
 .bgSefaresh {
   height: 100%;
@@ -596,13 +613,22 @@ body {
   background: url("../images/backSfaresh.png") no-repeat 50%;
   background-size: 140px;
   position: absolute;
-  right: 11px;
+  right: 4px;
   bottom: 5px;
   display: none;
   transition: 0.5s;
 }
 
-
+#stage>#levelOnePage>#oldWoman>#sefaresh2>#dooghOldWoman,
+#stage>#levelOnePage>#woman>#sefaresh1>#dooghWoman {
+  width: 25px;
+  height: 35px;
+  background: url("../images/dooghFull.png") no-repeat 50%;
+  background-size: contain;
+  position: absolute;
+  right: 70px;
+  display: block;
+}
 
 #stage>#levelOnePage>.coin1 {
   width: 25px;
@@ -650,6 +676,7 @@ body {
 }
 
 @keyframes timerColor {
+
   0%,
   50% {
     background: rgb(59, 255, 59);
@@ -669,15 +696,6 @@ body {
 /*          man            */
 #stage>#levelOnePage>#man {
   background: url("../images/man/man0.png") no-repeat 0% 100%;
-  background-size: 100px;
-  /* border: 1px solid red; */
-  width: 250px;
-  height: 210px;
-  position: absolute;
-  left: -50px;
-  /* left: 50px; */
-  bottom: 430px;
-  display: none;
   --stop-x: 940px;
   z-index: 5;
 }
@@ -733,7 +751,7 @@ body {
   80% {
     background-image: url(../images/man/man0paeen.png);
   }
-  
+
   100% {
     transform: translateX(150vw);
     background-image: url("../images/man/man0paeen.png");
@@ -749,7 +767,7 @@ body {
     transform: translateX(var(--stop-x));
   }
 
-  0%{
+  0% {
     background-image: url(../images/man/man0.png);
   }
 
@@ -792,7 +810,6 @@ body {
 }
 
 @keyframes manAngry {
-
   0%,
   15%,
   25%,
@@ -827,18 +844,8 @@ body {
 }
 
 /*     woman      */
-
 #stage>#levelOnePage>#woman {
   background: url("../images/wife/wife0.png") no-repeat 0% 100%;
-  background-size: 100px;
-  /* border: 1px solid red; */
-  width: 250px;
-  height: 210px;
-  position: absolute;
-  left: -50px;
-  /* left: 50px; */
-  bottom: 430px;
-  display: none;
   --stop-x: 680px;
   z-index: 4;
 }
@@ -887,7 +894,7 @@ body {
   20%,
   50%,
   70%,
-  90%{
+  90% {
     background-image: url(../images/wife/wife0paeen.png);
   }
 }
@@ -947,7 +954,7 @@ body {
   50%,
   60%,
   80%,
-  90%{
+  90% {
     background-image: url(../images/wife/wife12.png);
   }
 
@@ -958,7 +965,7 @@ body {
 
   65%,
   75%,
-  95%{
+  95% {
     background-image: url(../images/wife/wife13.png);
   }
 
@@ -978,7 +985,7 @@ body {
   30%,
   40%,
   60%,
-  80%{
+  80% {
     background-image: url(../images/wife/wife0bala.png);
 
   }
@@ -986,7 +993,7 @@ body {
   20%,
   50%,
   70%,
-  90%{
+  90% {
     background-image: url(../images/wife/wife0paeen.png);
   }
 
@@ -1009,12 +1016,145 @@ body {
 }
 
 #stage>#levelOnePage>#woman>#sefaresh1>#dooghWoman {
-  width: 25px;
-  height: 35px;
-  background: url("../images/dooghFull.png") no-repeat 50%;
-  background-size: contain;
-  position: absolute;
-  right: 70px;
   bottom: 50px;
-  display: block;
+}
+
+/*        grandma         */
+#stage>#levelOnePage>#oldWoman {
+  background: url("../images/Oldwoman/Oldwoman0.png") no-repeat 0% 100%;
+  /* left: 150px; */
+  --stop-x: 420px;
+  z-index: 2;
+}
+
+#stage>#levelOnePage>#oldWoman.oldWomanCame {
+  animation: moveOldWoman 4s linear forwards;
+}
+
+#stage>#levelOnePage>#oldWoman.happyOldWoman {
+  transform: translateX(var(--stop-x));
+  animation: oldWomanHappy 5s steps(1, end) 3;
+}
+
+#stage>#levelOnePage>#oldWoman.angryOldWoman {
+  transform: translateX(var(--stop-x));
+  animation: oldWomanAngry 15s steps(1, end) 1;
+}
+
+#stage>#levelOnePage>#oldWoman.oldWomanLeaves {
+  animation: moveOutOldWoman 13s linear forwards;
+}
+
+@keyframes moveOldWoman {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--stop-x));
+  }
+
+  0% {
+    background-image: url("../images/Oldwoman/Oldwoman0.png");
+  }
+
+  10%,
+  30%,
+  40%,
+  60%,
+  80%,
+  100% {
+    background-image: url(../images/Oldwoman/Oldwoman0bala.png);
+
+  }
+
+  20%,
+  50%,
+  70%,
+  90% {
+    background-image: url(../images/Oldwoman/Oldwoman0paeen.png);
+  }
+}
+
+@keyframes oldWomanHappy {
+  0%,
+  75% {
+    background-image: url("../images/Oldwoman/Oldwoman0.png");
+  }
+
+  25% {
+    background-image: url("../images/Oldwoman/Oldwoman0paeen.png");
+  }
+
+  50%,
+  100% {
+    background-image: url("../images/Oldwoman/Oldwoman01.png");
+  }
+}
+
+@keyframes oldWomanAngry {
+  0%,
+  15%,
+  25%,
+  35% {
+    background-image: url(../images/Oldwoman/Oldwoman02.png);
+  }
+
+  5%,
+  20%,
+  30%,
+  40% {
+    background-image: url(../images/Oldwoman/Oldwoman03.png);
+  }
+
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    background-image: url(../images/Oldwoman/Oldwoman04.png);
+  }
+
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    background-image: url(../images/Oldwoman/Oldwoman05.png);
+  }
+}
+
+@keyframes moveOutOldWoman {
+  0% {
+    transform: translateX(var(--stop-x));
+    background-image: url("../images/Oldwoman/Oldwoman0.png");
+  }
+
+  10%,
+  30%,
+  40%,
+  60%,
+  80% {
+    background-image: url(../images/Oldwoman/Oldwoman0bala.png);
+
+  }
+
+  20%,
+  50%,
+  70%,
+  90% {
+    background-image: url(../images/Oldwoman/Oldwoman0paeen.png);
+  }
+
+  100% {
+    transform: translateX(150vw);
+
+    background-image: url(../images/Oldwoman/Oldwoman0bala.png);
+  }
+}
+
+#stage>#levelOnePage>#oldWoman>#sefaresh2>#dooghOldWoman{
+  bottom: 85px;
 }
